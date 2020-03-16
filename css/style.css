@@ -3,7 +3,7 @@
   margin: 0; }
 
 .main-container {
-  background: url("/media/food.png") repeat;
+  background: url("../media/food.png") repeat;
   background-size: contain;
   width: 100%;
   height: 100vh;
@@ -31,14 +31,14 @@
   animation: env-appear 0.5s 1.45s forwards, env-rotate-front 0.5s 1.35s forwards, put-aside 0.5s 2.1s forwards; }
   .envelope-back .cover-back {
     position: absolute;
-    background: url("/media/card-envelope-over.png") no-repeat;
+    background: url("../media/card-envelope-over.png") no-repeat;
     background-size: contain;
     height: 460px;
     width: 658px; }
   .envelope-back .cover-top {
     position: absolute;
     top: 0;
-    background: url("/media/card-envelope-under_.png") no-repeat;
+    background: url("../media/card-envelope-under_.png") no-repeat;
     background-size: contain;
     height: 290px;
     width: 658px;
@@ -47,7 +47,7 @@
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
-    background: url("/media/card-envelope-under.png") no-repeat;
+    background: url("../media/card-envelope-under.png") no-repeat;
     background-size: contain;
     top: -290px;
     height: 715px;
@@ -79,7 +79,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("/media/GHBMenBabochkaRubashkaOborot.jpg") no-repeat;
+      background: url("../media/GHBMenBabochkaRubashkaOborot.jpg") no-repeat;
       background-size: contain;
       backface-visibility: hidden;
       transform: rotateY(180deg); }
