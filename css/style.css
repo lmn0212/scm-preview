@@ -15,6 +15,7 @@
   position: absolute;
   right: -36%;
   top: 25%;
+  -webkit-transform: rotateZ(5deg);
   transform: rotateZ(5deg);
   animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards; }
   .envelope-front .image {
@@ -42,6 +43,7 @@
     background-size: contain;
     height: 290px;
     width: 658px;
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     animation: env-disappear 1.2s 2.1s forwards; }
   .envelope-back .backwall-env {
@@ -57,10 +59,12 @@
     position: absolute;
     width: 395px;
     height: 570px;
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     top: -70px;
     left: 150px;
     animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
     .envelope-back .card .card-front {
       position: absolute;
@@ -72,6 +76,7 @@
       background-size: contain;
       backface-visibility: hidden;
       z-index: 2;
+      -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg); }
     .envelope-back .card .card-back {
       position: absolute;
@@ -82,6 +87,7 @@
       background: url("../media/GHBMenBabochkaRubashkaOborot.jpg") no-repeat;
       background-size: contain;
       backface-visibility: hidden;
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg); }
 
 @keyframes env-front-appear {
