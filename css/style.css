@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.main-container {
+  background: url("/media/food.png") repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  perspective: 950px;
+  overflow: hidden; }
+
+.envelope-front {
+  position: absolute;
+  right: -36%;
+  top: 25%;
+  transform: rotateZ(5deg);
+  animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards; }
+  .envelope-front .image {
+    background: url("/media/card-envelope-visite_2x.jpg") repeat;
+    background-size: cover;
+    height: 460px;
+    width: 658px; }
+
+.envelope-back {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  top: 25%;
+  animation: env-appear 0.5s 1.45s forwards, env-rotate-front 0.5s 1.35s forwards, put-aside 0.5s 2.1s forwards; }
+  .envelope-back .cover-back {
+    position: absolute;
+    background: url("/media/card-envelope-over.png") no-repeat;
+    background-size: contain;
+    height: 460px;
+    width: 658px; }
+  .envelope-back .cover-top {
+    position: absolute;
+    top: 0;
+    background: url("/media/card-envelope-under_.png") no-repeat;
+    background-size: contain;
+    height: 290px;
+    width: 658px;
+    transform: rotate(180deg);
+    animation: env-disappear 1.2s 2.1s forwards; }
+  .envelope-back .backwall-env {
+    position: absolute;
+    opacity: 0;
+    background: url("/media/card-envelope-under.png") no-repeat;
+    background-size: contain;
+    top: -290px;
+    height: 715px;
+    width: 658px;
+    animation: env-appear 1s 1.9s forwards; }
+  .envelope-back .card {
+    position: absolute;
+    width: 395px;
+    height: 570px;
+    transform: rotate(-90deg);
+    top: -70px;
+    left: 150px;
+    animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
+    transform-style: preserve-3d; }
+    .envelope-back .card .card-front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("/media/GHBMenBabochkaRubashkaLitso.jpg") no-repeat;
+      background-size: contain;
+      backface-visibility: hidden;
+      z-index: 2;
+      transform: rotateY(0deg); }
+    .envelope-back .card .card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("/media/GHBMenBabochkaRubashkaOborot.jpg") no-repeat;
+      background-size: contain;
+      backface-visibility: hidden;
+      transform: rotateY(180deg); }
+
+@keyframes env-front-appear {
+  0% {
+    right: -35%;
+    opacity: 0; }
+  30% {
+    opacity: 0; }
+  40% {
+    opacity: 100%; }
+  95% {
+    opacity: 100%; }
+  100% {
+    right: 35%;
+    opacity: 0; } }
+@keyframes env-disappear {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 0; } }
+@keyframes env-appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+@keyframes env-rotate-back {
+  0% {
+    transform: rotate3d(0, 0, 1, 5deg); }
+  100% {
+    transform: rotate3d(0, 1, 0, 92deg); } }
+@keyframes env-rotate-front {
+  0% {
+    transform: rotate3d(0, 1, 0, 92deg);
+    right: 55%; }
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg);
+    right: 35%; } }
+@keyframes put-aside {
+  0% {
+    transform: rotate(0deg);
+    top: 25%;
+    right: 65%; }
+  100% {
+    transform: rotate(85deg);
+    top: -30%;
+    right: 60%; } }
+@keyframes put-aside-2 {
+  0% {
+    top: 25%;
+    right: 35%; }
+  100% {
+    top: -30%;
+    right: 60%; } }
+@keyframes card-advance {
+  0% {
+    top: -70px;
+    transform: rotate(-90deg); }
+  50% {
+    top: -470px;
+    transform: rotate(-86deg); }
+  100% {
+    top: -70px;
+    transform: rotate(-86deg);
+    z-index: 1; } }
+@keyframes card-rotate {
+  0% {
+    transform: rotate(-86deg) rotateY(0deg); }
+  100% {
+    transform: rotate(-86deg) rotateY(180deg); } }
+
+/*# sourceMappingURL=style.css.map */
