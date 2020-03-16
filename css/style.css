@@ -17,6 +17,7 @@
   top: 25%;
   -webkit-transform: rotateZ(5deg);
   transform: rotateZ(5deg);
+  -webkit-animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards;
   animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards; }
   .envelope-front .image {
     background: url("../media/card-envelope-visite_2x.jpg") repeat;
@@ -29,6 +30,7 @@
   height: 100%;
   opacity: 0;
   top: 25%;
+  -webkit-animation: env-appear .5s 1.45s forwards, env-rotate-front .5s 1.35s forwards, put-aside .5s 2.1s forwards;
   animation: env-appear .5s 1.45s forwards, env-rotate-front .5s 1.35s forwards, put-aside .5s 2.1s forwards; }
   .envelope-back .cover-back {
     position: absolute;
@@ -45,6 +47,7 @@
     width: 658px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    -webkit-animation: env-disappear 1.2s 2.1s forwards;
     animation: env-disappear 1.2s 2.1s forwards; }
   .envelope-back .backwall-env {
     position: absolute;
@@ -54,6 +57,7 @@
     top: -290px;
     height: 715px;
     width: 658px;
+    -webkit-animation: env-appear 1s 1.9s forwards;
     animation: env-appear 1s 1.9s forwards; }
   .envelope-back .card {
     position: absolute;
@@ -63,6 +67,7 @@
     transform: rotate(-90deg);
     top: -70px;
     left: 150px;
+    -webkit-animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
     animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
