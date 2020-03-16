@@ -19,7 +19,6 @@
   transform: rotateZ(5deg);
   animation: env-front-appear 1.5s forwards,
              env-rotate-back .5s 1s forwards;
-             //env-disappear .1s 1s;
   .image {
     background: url("../media/card-envelope-visite_2x.jpg") repeat;
     background-size: cover;
@@ -31,11 +30,9 @@
   position: absolute;
   height: 100%;
   opacity: 0;
-  //right: 35%;
   top: 25%;
   animation: env-appear .5s 1.45s forwards,
   env-rotate-front .5s 1.35s forwards,
-  //put-aside-2 .5s 2.5s forwards,
   put-aside .5s 2.1s forwards;
 
   .cover-back {
@@ -147,4 +144,49 @@
 @keyframes card-rotate {
   0% {transform: rotate(-86deg) rotateY(0deg);}
   100% {transform: rotate(-86deg) rotateY(180deg);}
+}
+
+//safari
+@-webkit-keyframes env-front-appear {
+  0%   {right: -35%; opacity: 0}
+  30%  {opacity: 0}
+  40%  {opacity: 100%}
+  95%  {opacity: 100%}
+  100% {right: 35%; opacity: 0}
+}
+
+@-webkit-keyframes env-disappear {
+  0% {opacity: 100%;}
+  100% {opacity: 0;}
+}
+
+@-webkit-keyframes env-appear {
+  0% {opacity: 0;}
+  100% {opacity: 100%;}
+}
+
+@-webkit-keyframes env-rotate-back {
+  0% {-webkit-transform: rotate3d(0, 0, 1, 5deg);}
+  100% {-webkit-transform: rotate3d(0, 1, 0, 92deg);}
+}
+@-webkit-keyframes env-rotate-front {
+  0% {-webkit-transform: rotate3d(0, 1, 0, 92deg);right:55%;}
+  100% {-webkit-transform: rotate3d(0, 1, 0, 180deg);right: 35%;}
+}
+@-webkit-keyframes put-aside {
+  0% {-webkit-transform: rotate(0deg);top: 25%; right: 65%}
+  100% {-webkit-transform: rotate(85deg);top: -30%; right: 60%}
+}
+@-webkit-keyframes put-aside-2 {
+  0% {top: 25%; right: 35%}
+  100% {top: -30%; right: 60%}
+}
+@-webkit-keyframes card-advance {
+  0% {top: -70px; transform: rotate(-90deg);}
+  50% {top: -470px; transform: rotate(-86deg);}
+  100% {top: -70px; transform: rotate(-86deg);z-index: 1}
+}
+@-webkit-keyframes card-rotate {
+  0% {-webkit-transform: rotate(-86deg) rotateY(0deg);}
+  100% {-webkit-transform: rotate(-86deg) rotateY(180deg);}
 }
