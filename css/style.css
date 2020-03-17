@@ -1,6 +1,6 @@
 @keyframes env-front-appear {
   0% {
-    right: -35%;
+    right: -35rem;
     opacity: 0; }
   30% {
     opacity: 0; }
@@ -9,7 +9,7 @@
   95% {
     opacity: 100%; }
   100% {
-    right: 35%;
+    right: 40rem;
     opacity: 0; } }
 @keyframes env-disappear {
   0% {
@@ -29,35 +29,28 @@
 @keyframes env-rotate-front {
   0% {
     transform: rotate3d(0, 1, 0, 92deg);
-    right: 55%; }
+    right: 55rem; }
   100% {
     transform: rotate3d(0, 1, 0, 180deg);
-    right: 35%; } }
+    right: 40rem; } }
 @keyframes put-aside {
   0% {
     transform: rotate(0deg);
-    top: 25%;
-    right: 65%; }
+    top: 25rem;
+    right: 65rem; }
   100% {
     transform: rotate(85deg);
-    top: -30%;
-    right: 60%; } }
-@keyframes put-aside-2 {
-  0% {
-    top: 25%;
-    right: 35%; }
-  100% {
-    top: -30%;
-    right: 60%; } }
+    top: -15rem;
+    right: 77rem; } }
 @keyframes card-advance {
   0% {
-    top: -70px;
+    top: -4.4rem;
     transform: rotate(-90deg); }
   50% {
-    top: -470px;
+    top: -29.4rem;
     transform: rotate(-86deg); }
   100% {
-    top: -70px;
+    top: -4.4rem;
     transform: rotate(-86deg);
     z-index: 1; } }
 @keyframes card-rotate {
@@ -83,11 +76,15 @@
 @-webkit-keyframes env-disappear {
   0% {
     opacity: 1; }
+  50% {
+    opacity: 0.5; }
   100% {
     opacity: 0; } }
 @-webkit-keyframes env-appear {
   0% {
     opacity: 0; }
+  50% {
+    opacity: 0.5; }
   100% {
     opacity: 1; } }
 @-webkit-keyframes env-rotate-back {
@@ -142,11 +139,19 @@
 @-webkit-keyframes card-rotate {
   0% {
     -webkit-transform: rotate(-86deg) rotateY(0deg); }
+  50% {
+    -webkit-transform: rotate(-86deg) rotateY(90deg); }
   100% {
     -webkit-transform: rotate(-86deg) rotateY(180deg); } }
 * {
   padding: 0;
   margin: 0; }
+
+html, body {
+  font-size: 16px; }
+  @media screen and (max-width: 1600px) {
+    html, body {
+      font-size: 13px; } }
 
 .main-container {
   width: 100%;
@@ -157,32 +162,32 @@
 
 .envelope-front {
   position: absolute;
-  right: -36%;
-  top: 25%;
+  right: -36rem;
+  top: 20rem;
   -webkit-transform: rotateZ(5deg);
   transform: rotateZ(5deg);
   -webkit-animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards;
   animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards; }
   .envelope-front .image {
-    height: 460px;
-    width: 658px; }
+    height: 28.75rem;
+    width: 41.125rem; }
 
 .envelope-back {
   position: absolute;
   height: 100%;
   opacity: 0;
-  top: 25%;
+  top: 20rem;
   -webkit-animation: env-appear .5s 1.5s forwards, env-rotate-front .5s 1.5s forwards, put-aside .5s 2.1s forwards ease-in-out;
   animation: env-appear .5s 1.45s forwards, env-rotate-front .5s 1.35s forwards, put-aside .5s 2.1s forwards ease-in-out; }
   .envelope-back .cover-back {
     position: absolute;
-    height: 460px;
-    width: 658px; }
+    height: 28.75rem;
+    width: 41.125rem; }
   .envelope-back .cover-top {
     position: absolute;
     top: 0;
-    height: 290px;
-    width: 658px;
+    height: 18.125rem;
+    width: 41.125rem;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     -webkit-animation: env-disappear 1.2s 2.1s forwards;
@@ -190,19 +195,19 @@
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
-    top: -290px;
-    height: 715px;
-    width: 658px;
+    top: -19rem;
+    height: 44.68rem;
+    width: 41.125rem;
     -webkit-animation: env-appear 1s 1.9s forwards;
     animation: env-appear 1s 1.9s forwards; }
   .envelope-back .card {
     position: absolute;
-    width: 395px;
-    height: 570px;
+    width: 24.68rem;
+    height: 35.6rem;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    top: -70px;
-    left: 150px;
+    top: -4.4rem;
+    left: 9.4rem;
     -webkit-animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
     animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
     -webkit-transform-style: preserve-3d;
