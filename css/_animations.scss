@@ -47,12 +47,12 @@
   0%   {right: -35%; opacity: 0}
   30%  {right: -35%; opacity: 0}
   40%  {right: -35%; opacity: 1}
-  95%  {opacity: 100%}
+  95%  {opacity: 1}
   100% {right: 35%; opacity: 0}
 }
 
 @-webkit-keyframes env-disappear {
-  0% {opacity: 100%;}
+  0% {opacity: 1;}
   100% {opacity: 0;}
 }
 
@@ -63,20 +63,22 @@
 
 @-webkit-keyframes env-rotate-back {
   0% {-webkit-transform: rotate3d(0, 0, 1, 5deg);}
+  50%{-webkit-transform: rotate3d(0, 0, 1, 47deg);}
   100% {-webkit-transform: rotate3d(0, 1, 0, 92deg);}
 }
 @-webkit-keyframes env-rotate-front {
   0% {-webkit-transform: rotate3d(0, 1, 0, 92deg);right:55%;}
+  50% {-webkit-transform: rotate3d(0, 1, 0, 120deg);right: 45%;}
   100% {-webkit-transform: rotate3d(0, 1, 0, 180deg);right: 35%;}
 }
 @-webkit-keyframes put-aside {
   0% {-webkit-transform: rotate(0deg);top: 25%; right: 65%}
+  25% {-webkit-transform: rotate(23.75deg);top: 26.25%; right: 63.75%}
+  50% {-webkit-transform: rotate(47.5deg);top: 27.5%; right: 62.5%}
+  75% {-webkit-transform: rotate(61.25deg);top: 28.75%; right: 61.25%}
   100% {-webkit-transform: rotate(85deg);top: -30%; right: 60%}
 }
-@-webkit-keyframes put-aside-2 {
-  0% {top: 25%; right: 35%}
-  100% {top: -30%; right: 60%}
-}
+
 @-webkit-keyframes card-advance {
   0% {top: -70px; transform: rotate(-90deg);}
   50% {top: -470px; transform: rotate(-86deg);}

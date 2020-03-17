@@ -34,12 +34,12 @@
   height: 100%;
   opacity: 0;
   top: 25%;
-  -webkit-animation: env-appear .5s 1.45s forwards,
-  env-rotate-front .5s 1.35s forwards,
-  put-aside .5s 2.1s forwards;
+  -webkit-animation: env-appear .5s 1.5s forwards,
+  env-rotate-front .5s 1.5s forwards,
+  put-aside .5s 2.1s forwards ease-in-out;
   animation: env-appear .5s 1.45s forwards,
   env-rotate-front .5s 1.35s forwards,
-  put-aside .5s 2.1s forwards;
+  put-aside .5s 2.1s forwards ease-in-out;
 
   .cover-back {
     position: absolute;
@@ -94,6 +94,7 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
+      -webkit-animation: env-disappear .2s 5s forwards;
     }
 
     .card-back {
