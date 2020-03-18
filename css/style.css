@@ -1,6 +1,6 @@
 @keyframes env-front-appear {
   0% {
-    right: -35rem;
+    right: -35%;
     opacity: 0; }
   30% {
     opacity: 0; }
@@ -9,7 +9,7 @@
   95% {
     opacity: 100%; }
   100% {
-    right: 40rem;
+    right: 35%;
     opacity: 0; } }
 @keyframes env-disappear {
   0% {
@@ -29,28 +29,31 @@
 @keyframes env-rotate-front {
   0% {
     transform: rotate3d(0, 1, 0, 92deg);
-    right: 55rem; }
+    right: 55%; }
   100% {
     transform: rotate3d(0, 1, 0, 180deg);
-    right: 40rem; } }
+    right: 35%; } }
 @keyframes put-aside {
   0% {
-    transform: rotate(0deg);
-    top: 25rem;
-    right: 65rem; }
+    transform: rotate(0deg); }
   100% {
-    transform: rotate(85deg);
-    top: -15rem;
-    right: 77rem; } }
+    transform: rotate(85deg); } }
+@keyframes put-aside-2 {
+  0% {
+    top: 25%;
+    right: 35%; }
+  100% {
+    top: -30%;
+    right: 60%; } }
 @keyframes card-advance {
   0% {
-    top: -4.4rem;
+    top: -70px;
     transform: rotate(-90deg); }
   50% {
-    top: -29.4rem;
+    top: -470px;
     transform: rotate(-86deg); }
   100% {
-    top: -4.4rem;
+    top: -70px;
     transform: rotate(-86deg);
     z-index: 1; } }
 @keyframes card-rotate {
@@ -68,7 +71,7 @@
   40% {
     right: -35%;
     opacity: 1; }
-  95% {
+  75% {
     opacity: 1; }
   100% {
     right: 35%;
@@ -90,41 +93,20 @@
 @-webkit-keyframes env-rotate-back {
   0% {
     -webkit-transform: rotate3d(0, 0, 1, 5deg); }
-  50% {
-    -webkit-transform: rotate3d(0, 0, 1, 47deg); }
   100% {
     -webkit-transform: rotate3d(0, 1, 0, 92deg); } }
 @-webkit-keyframes env-rotate-front {
   0% {
     -webkit-transform: rotate3d(0, 1, 0, 92deg);
     right: 55%; }
-  50% {
-    -webkit-transform: rotate3d(0, 1, 0, 120deg);
-    right: 45%; }
   100% {
     -webkit-transform: rotate3d(0, 1, 0, 180deg);
     right: 35%; } }
 @-webkit-keyframes put-aside {
   0% {
-    -webkit-transform: rotate(0deg);
-    top: 25%;
-    right: 65%; }
-  25% {
-    -webkit-transform: rotate(23.75deg);
-    top: 26.25%;
-    right: 63.75%; }
-  50% {
-    -webkit-transform: rotate(47.5deg);
-    top: 27.5%;
-    right: 62.5%; }
-  75% {
-    -webkit-transform: rotate(61.25deg);
-    top: 28.75%;
-    right: 61.25%; }
+    -webkit-transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(85deg);
-    top: -30%;
-    right: 60%; } }
+    -webkit-transform: rotate(85deg); } }
 @-webkit-keyframes card-advance {
   0% {
     top: -70px;
@@ -135,23 +117,15 @@
   100% {
     top: -70px;
     transform: rotate(-86deg);
-    z-index: 1; } }
+    z-index: 2; } }
 @-webkit-keyframes card-rotate {
   0% {
     -webkit-transform: rotate(-86deg) rotateY(0deg); }
-  50% {
-    -webkit-transform: rotate(-86deg) rotateY(90deg); }
   100% {
     -webkit-transform: rotate(-86deg) rotateY(180deg); } }
 * {
   padding: 0;
   margin: 0; }
-
-html, body {
-  font-size: 16px; }
-  @media screen and (max-width: 1600px) {
-    html, body {
-      font-size: 13px; } }
 
 .main-container {
   width: 100%;
@@ -162,32 +136,35 @@ html, body {
 
 .envelope-front {
   position: absolute;
-  right: -36rem;
-  top: 20rem;
+  right: -36%;
+  top: 25%;
   -webkit-transform: rotateZ(5deg);
   transform: rotateZ(5deg);
   -webkit-animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards;
   animation: env-front-appear 1.5s forwards, env-rotate-back .5s 1s forwards; }
   .envelope-front .image {
-    height: 28.75rem;
-    width: 41.125rem; }
+    height: 460px;
+    width: 658px; }
 
 .envelope-back {
   position: absolute;
-  height: 100%;
+  height: 717px;
+  width: 769px;
   opacity: 0;
-  top: 20rem;
-  -webkit-animation: env-appear .5s 1.5s forwards, env-rotate-front .5s 1.5s forwards, put-aside .5s 2.1s forwards ease-in-out;
-  animation: env-appear .5s 1.45s forwards, env-rotate-front .5s 1.35s forwards, put-aside .5s 2.1s forwards ease-in-out; }
+  top: 25%;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation: env-appear .5s 1.45s forwards, env-rotate-front .5s 1.35s forwards, put-aside .5s 2.1s forwards;
+  animation: env-appear .5s 1.45s forwards, env-rotate-front .5s 1.35s forwards, put-aside .5s 2.1s forwards; }
   .envelope-back .cover-back {
     position: absolute;
-    height: 28.75rem;
-    width: 41.125rem; }
+    height: 460px;
+    width: 658px; }
   .envelope-back .cover-top {
     position: absolute;
     top: 0;
-    height: 18.125rem;
-    width: 41.125rem;
+    height: 290px;
+    width: 658px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     -webkit-animation: env-disappear 1.2s 2.1s forwards;
@@ -195,19 +172,19 @@ html, body {
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
-    top: -19rem;
-    height: 44.68rem;
-    width: 41.125rem;
+    top: -290px;
+    height: 715px;
+    width: 658px;
     -webkit-animation: env-appear 1s 1.9s forwards;
     animation: env-appear 1s 1.9s forwards; }
   .envelope-back .card {
     position: absolute;
-    width: 24.68rem;
-    height: 35.6rem;
+    width: 395px;
+    height: 570px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    top: -4.4rem;
-    left: 9.4rem;
+    top: -70px;
+    left: 150px;
     -webkit-animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
     animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards;
     -webkit-transform-style: preserve-3d;
@@ -230,6 +207,7 @@ html, body {
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
+      z-index: 1;
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg); }
 
