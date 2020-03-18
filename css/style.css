@@ -112,12 +112,12 @@
     top: -70px;
     transform: rotate(-90deg); }
   50% {
-    top: -470px;
+    top: -490px;
     transform: rotate(-86deg); }
   100% {
     top: -70px;
     transform: rotate(-86deg);
-    z-index: 2; } }
+    z-index: 1; } }
 @-webkit-keyframes card-rotate {
   0% {
     -webkit-transform: rotate(-86deg) rotateY(0deg); }
