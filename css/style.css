@@ -180,8 +180,7 @@
     transform: rotate(-90deg);
     top: -70px;
     left: 150px;
-    -webkit-animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards, card-back-rotate .5s 6.5s forwards;
-    animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards, card-back-rotate 1s 6.5s forwards;
+    -webkit-animation: card-advance 1.5s 2.8s forwards;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
     .envelope-back .card .card-front {
@@ -194,7 +193,7 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
-      -webkit-animation: env-disappear .2s 4.5s forwards, env-appear .2s 6.75s forwards; }
+      -webkit-animation: flipOutY 1s 4.5s forwards, flipInY 1s 7s forwards; }
     .envelope-back .card .card-back {
       position: absolute;
       top: 0;
