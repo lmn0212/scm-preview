@@ -12,40 +12,40 @@
   overflow: hidden;
 }
 
-.envelope-front {
-  position: absolute;
-  right: 30%;
-  top: 25%;
-  -webkit-transform: rotateZ(5deg);
-  transform: rotateZ(5deg);
-  -webkit-animation: env-disappear .4s 1s forwards,
-  env-rotate-back .4s 1s forwards;
-  animation: env-disappear .4s 1s forwards,
-  env-rotate-back .4s 1s forwards;
-
-  .image {
-    height: 460px;
-    width: 658px;
-  }
-  @media screen and (max-width: 1400px) {
-    right: 25%;
-  }
-}
+//.envelope-front {
+//  position: absolute;
+//  right: 30%;
+//  top: 25%;
+//  -webkit-transform: rotateZ(5deg);
+//  transform: rotateZ(5deg);
+//  -webkit-animation: env-disappear .4s 1s forwards,
+//  env-rotate-back .4s 1s forwards;
+//  animation: env-disappear .4s 1s forwards,
+//  env-rotate-back .4s 1s forwards;
+//
+//  .image {
+//    height: 460px;
+//    width: 658px;
+//  }
+//  @media screen and (max-width: 1400px) {
+//    right: 25%;
+//  }
+//}
 
 .envelope-back {
   position: absolute;
   //height: 100%;
   height: 717px;
   width: 769px;
-  opacity: 0;
+  //opacity: 0;
   top: 25%;
+  right: 25%;
   -webkit-transform-origin: center center;
   transform-origin: center center;
   -webkit-animation: env-appear .5s 1.1s forwards,
   env-rotate-front .5s 1.1s forwards,
   put-aside .5s 2.1s forwards;
-  animation: env-appear .5s 1.1s forwards,
-  env-rotate-front .5s 1.1s forwards,
+  animation:
   put-aside .5s 2.1s forwards;
 
   .cover-back {
@@ -84,9 +84,11 @@
     top: -70px;
     left: 150px;
     -webkit-animation: card-advance 1.5s 2.8s forwards,
-    card-rotate 1s 4.5s forwards;
+    card-rotate 1s 4.5s forwards,
+    card-back-rotate .5s 6.5s forwards;
     animation: card-advance 1.5s 2.8s forwards,
-    card-rotate 1s 4.5s forwards;
+    card-rotate 1s 4.5s forwards,
+    card-back-rotate 1s 6.5s forwards;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 
@@ -101,7 +103,8 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
-      -webkit-animation: env-disappear .2s 4.5s forwards;
+      -webkit-animation: env-disappear .2s 4.5s forwards,
+      env-appear .2s 6.75s forwards;
     }
 
     .card-back {
@@ -112,7 +115,7 @@
       height: 100%;
 
       backface-visibility: hidden;
-      z-index: 1;
+      //z-index: 1;
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
     }

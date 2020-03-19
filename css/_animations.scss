@@ -25,8 +25,8 @@
   100% {transform: rotate3d(0, 1, 0, 180deg);right: 33%;}
 }
 @keyframes put-aside {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(85deg);}
+  0% {transform: rotate(0deg);right: 25%}
+  100% {transform: rotate(85deg);right: 35%}
 }
 @keyframes card-advance {
   0% {top: -70px; transform: rotate(-90deg);}
@@ -36,6 +36,10 @@
 @keyframes card-rotate {
   0% {transform: rotate(-86deg) rotateY(0deg);}
   100% {transform: rotate(-86deg) rotateY(180deg);}
+}
+@keyframes card-back-rotate {
+  0% {transform: rotate(-86deg) rotateY(180deg);}
+  100% {transform: rotate(-86deg) rotateY(0deg);}
 }
 
 //safari
@@ -68,9 +72,9 @@
   100% {-webkit-transform: rotate3d(0, 1, 0, 180deg);right: 33%;}
 }
 @-webkit-keyframes put-aside {
-  0% {-webkit-transform: rotate(0deg);}
+  0% {-webkit-transform: rotate(0deg);right: 25%}
   //50% {-webkit-transform: rotate(42.5deg);-webkit-transform-origin: center center;}
-  100% {-webkit-transform: rotate(85deg);}
+  100% {-webkit-transform: rotate(85deg);right: 35%}
 }
 @-webkit-keyframes card-advance {
   0% {top: -70px; transform: rotate(-90deg);}
@@ -80,4 +84,8 @@
 @-webkit-keyframes card-rotate {
   0% {-webkit-transform: rotate(-86deg) rotateY(0deg);}
   100% {-webkit-transform: rotate(-86deg) rotateY(180deg);}
+}
+@-webkit-keyframes card-back-rotate {
+  0% {-webkit-transform: rotate(-86deg) rotateY(180deg);}
+  100% {-webkit-transform: rotate(-86deg) rotateY(0deg);}
 }
