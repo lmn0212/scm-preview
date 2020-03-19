@@ -149,8 +149,8 @@
   right: 25%;
   -webkit-transform-origin: center center;
   transform-origin: center center;
-  -webkit-animation: env-appear .5s 1.1s forwards, env-rotate-front .5s 1.1s forwards, put-aside .5s 2.1s forwards;
-  animation: put-aside .5s 2.1s forwards; }
+  -webkit-animation: put-aside .5s .5s forwards;
+  animation: put-aside .5s .5s forwards; }
   .envelope-back.toanimate .cover-back {
     position: absolute;
     height: 460px;
@@ -162,16 +162,16 @@
     width: 658px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    -webkit-animation: env-disappear 1.2s 2.1s forwards;
-    animation: env-disappear 1.2s 2.1s forwards; }
+    -webkit-animation: env-disappear 1s .7s forwards;
+    animation: env-disappear 1s .7s forwards; }
   .envelope-back.toanimate .backwall-env {
     position: absolute;
     opacity: 0;
     top: -290px;
     height: 715px;
     width: 658px;
-    -webkit-animation: env-appear .7s 1.9s forwards;
-    animation: env-appear .7s 1.9s forwards; }
+    -webkit-animation: env-appear .7s .7s forwards;
+    animation: env-appear .7s .7s forwards; }
   .envelope-back.toanimate .card {
     position: absolute;
     width: 395px;
@@ -180,8 +180,8 @@
     transform: rotate(-90deg);
     top: -70px;
     left: 150px;
-    -webkit-animation: card-advance 1.5s 2.8s forwards;
-    animation: card-advance 1.5s 2.8s forwards; }
+    -webkit-animation: card-advance 1.5s 1.5s forwards;
+    animation: card-advance 1.5s 1.5s forwards; }
     .envelope-back.toanimate .card .card-front {
       position: absolute;
       top: 0;
@@ -191,7 +191,7 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
-      animation: flipOutY .2s 4.5s forwards, flipInY .5s 7s forwards; }
+      animation: flipOutY .2s 3s forwards, flipInY .5s 5s forwards; }
     .envelope-back.toanimate .card .card-back {
       position: absolute;
       top: 0;
@@ -200,6 +200,6 @@
       height: 100%;
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
-      animation: flipInY .5s 4.5s forwards, flipOutY .2s 7s forwards; }
+      animation: flipInY .5s 3s forwards, flipOutY .2s 5s forwards; }
 
 /*# sourceMappingURL=style.css.map */
