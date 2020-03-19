@@ -146,11 +146,10 @@
   height: 717px;
   width: 769px;
   top: 25%;
-  right: 25%;
   -webkit-transform-origin: center center;
   transform-origin: center center;
-  -webkit-animation: env-appear .5s 1.1s forwards, env-rotate-front .5s 1.1s forwards, put-aside .5s 2.1s forwards;
-  animation: put-aside .5s 2.1s forwards; }
+  transform: rotate(85deg);
+  right: 35%; }
   .envelope-back .cover-back {
     position: absolute;
     height: 460px;
@@ -162,16 +161,13 @@
     width: 658px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    -webkit-animation: env-disappear 1.2s 2.1s forwards;
-    animation: env-disappear 1.2s 2.1s forwards; }
+    opacity: 0; }
   .envelope-back .backwall-env {
     position: absolute;
-    opacity: 0;
+    opacity: 100%;
     top: -290px;
     height: 715px;
-    width: 658px;
-    -webkit-animation: env-appear .7s 1.9s forwards;
-    animation: env-appear .7s 1.9s forwards; }
+    width: 658px; }
   .envelope-back .card {
     position: absolute;
     width: 395px;
@@ -181,6 +177,7 @@
     top: -70px;
     left: 150px;
     -webkit-animation: card-advance 1.5s 2.8s forwards;
+    animation: card-advance 1.5s 2.8s forwards;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
     .envelope-back .card .card-front {
@@ -193,7 +190,7 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
-      -webkit-animation: flipOutY 1s 4.5s forwards, flipInY 1s 7s forwards; }
+      -webkit-animation: flipOutY .2s 4.5s forwards, flipInY 1s 7s forwards; }
     .envelope-back .card .card-back {
       position: absolute;
       top: 0;
@@ -202,6 +199,7 @@
       height: 100%;
       backface-visibility: hidden;
       -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
+      transform: rotateY(180deg);
+      -webkit-animation: flipInY 1s 4.5s forwards, flipOutY .2s 7s forwards; }
 
 /*# sourceMappingURL=style.css.map */
