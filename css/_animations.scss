@@ -7,13 +7,13 @@
 }
 
 @keyframes env-disappear {
-  0% {opacity: 100%;}
+  0% {opacity: 1;}
   100% {opacity: 0;}
 }
 
 @keyframes env-appear {
   0% {opacity: 0;}
-  100% {opacity: 100%;}
+  100% {opacity: 1;}
 }
 
 @keyframes env-rotate-back {
@@ -40,6 +40,11 @@
 @keyframes card-back-rotate {
   0% {-webkit-transform: rotate(-86deg) rotateY(180deg); transform: rotate(-86deg) rotateY(180deg);}
   100% {-webkit-transform: rotate(-86deg) rotateY(0deg); transform: rotate(-86deg) rotateY(0deg);}
+}
+
+@keyframes back-flip {
+  0% {-webkit-transform: rotateY(90deg); transform: rotateY(90deg);}
+  100% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
 }
 
 //safari
@@ -89,3 +94,7 @@
   0% {-webkit-transform: rotate(-86deg) rotateY(180deg); transform: rotate(-86deg) rotateY(180deg);}
   100% {-webkit-transform: rotate(-86deg) rotateY(0deg); transform: rotate(-86deg) rotateY(0deg);}
 }
+@-webkit-keyframes back-flip {
+   0% {-webkit-transform: rotateY(90deg); transform: rotateY(90deg);}
+   100% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
+ }
