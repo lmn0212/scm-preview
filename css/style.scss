@@ -107,6 +107,8 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
+      -webkit-animation: env-disappear 0.4s 4.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards,
+      env-appear 0.4s 6s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards;
       //-webkit-animation: flip-out-ver-right 0.4s 4.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
       //animation: flip-out-ver-right 0.4s 4.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
       //animation: flipOutY .6s 4.7s forwards, flipInY .2s 6.5s forwards;

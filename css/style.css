@@ -267,7 +267,8 @@
       height: 100%;
       z-index: 2;
       -webkit-transform: rotateY(0deg);
-      transform: rotateY(0deg); }
+      transform: rotateY(0deg);
+      -webkit-animation: env-disappear 0.4s 4.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards, env-appear 0.4s 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
     .envelope-back .card .card-back {
       position: absolute;
       top: 0;
