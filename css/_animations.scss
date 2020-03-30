@@ -29,18 +29,42 @@
   100% {transform: rotate(85deg);right: 35%}
 }
 @keyframes card-advance {
-  0% {top: -70px; transform: rotate(-90deg);}
-  50% {top: -470px; transform: rotate(-86deg);}
-  100% {top: -70px; transform: rotate(-86deg);z-index: 1}
+  0% {top: -70px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+  50% {top: -470px; -webkit-transform: rotate(-86deg); transform: rotate(-86deg);}
+  100% {top: -70px; -webkit-transform: rotate(-86deg); transform: rotate(-86deg);z-index: 1}
 }
 @keyframes card-rotate {
-  0% {transform: rotate(-86deg) rotateY(0deg);}
-  100% {transform: rotate(-86deg) rotateY(180deg);}
+  0% {-webkit-transform: rotate(-86deg) rotateY(0deg); transform: rotate(-86deg) rotateY(0deg);}
+  100% {-webkit-transform: rotate(-86deg) rotateY(180deg); transform: rotate(-86deg) rotateY(180deg);}
 }
 @keyframes card-back-rotate {
   0% {transform: rotate(-86deg) rotateY(180deg);}
   100% {transform: rotate(-86deg) rotateY(0deg);}
 }
+//@keyframes flip-in-ver-right {
+//  0% {
+//    -webkit-transform: rotate(-86deg) rotateY(-80deg);
+//    transform: rotate(-86deg) rotateY(-80deg);
+//    opacity: 0;
+//  }
+//  100% {
+//    -webkit-transform: rotate(-86deg) rotateY(0);
+//    transform: rotate(-86deg) rotateY(0);
+//    opacity: 1;
+//  }
+//}
+//@keyframes flip-out-ver-right {
+//  0% {
+//    -webkit-transform: rotate(-86deg) rotateY(0);
+//    transform: rotate(-86deg) rotateY(0);
+//    opacity: 1;
+//  }
+//  100% {
+//    -webkit-transform: rotate(0deg) rotateY(70deg);
+//    transform: rotate(0deg) rotateY(70deg);
+//    opacity: 0;
+//  }
+//}
 
 //safari
 @-webkit-keyframes env-front-appear {
@@ -77,15 +101,16 @@
   100% {-webkit-transform: rotate(85deg);right: 35%}
 }
 @-webkit-keyframes card-advance {
-  0% {top: -70px; transform: rotate(-90deg);}
-  50% {top: -490px; transform: rotate(-86deg);}
-  100% {top: -70px; transform: rotate(-86deg);z-index: 1}
+  0% {top: -70px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+  50% {top: -470px; -webkit-transform: rotate(-86deg); transform: rotate(-86deg);}
+  100% {top: -70px; -webkit-transform: rotate(-86deg); transform: rotate(-86deg);z-index: 1}
 }
 @-webkit-keyframes card-rotate {
-  0% {-webkit-transform: rotate(-86deg) rotateY(0deg);}
-  100% {-webkit-transform: rotate(-86deg) rotateY(180deg);}
+  0% {-webkit-transform: rotate(-86deg) rotateY(0deg); transform: rotate(-86deg) rotateY(0deg);}
+  100% {-webkit-transform: rotate(-86deg) rotateY(180deg); transform: rotate(-86deg) rotateY(180deg);}
 }
 @-webkit-keyframes card-back-rotate {
   0% {-webkit-transform: rotate(-86deg) rotateY(180deg);}
   100% {-webkit-transform: rotate(-86deg) rotateY(0deg);}
 }
+
