@@ -178,8 +178,8 @@
     transform: rotate(-86deg) rotateY(0deg); } }
 @-webkit-keyframes flip-vertical-right {
   0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0); }
+    -webkit-transform: rotate(-86deg) rotateY(0);
+    transform: rotate(-86deg) rotateY(0); }
   100% {
     -webkit-transform: rotate(-86deg) rotateY(180deg);
     transform: rotate(-86deg) rotateY(180deg); } }
