@@ -68,6 +68,38 @@
   100% {
     -webkit-transform: rotate(-86deg) rotateY(0deg);
     transform: rotate(-86deg) rotateY(0deg); } }
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotate(-86deg) rotateY(0);
+    transform: rotate(-86deg) rotateY(0); }
+  100% {
+    -webkit-transform: rotate(-86deg) rotateY(180deg);
+    transform: rotate(-86deg) rotateY(180deg); } }
+@keyframes flipback-vertical-right {
+  0% {
+    -webkit-transform: rotate(-86deg) rotateY(180deg);
+    transform: rotate(-86deg) rotateY(180deg); }
+  100% {
+    -webkit-transform: rotate(-86deg) rotateY(0deg);
+    transform: rotate(-86deg) rotateY(0deg); } }
+@keyframes flip-in-ver-right {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    opacity: 1; } }
+@keyframes flip-out-ver-right {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    opacity: 0; } }
 @-webkit-keyframes env-front-appear {
   0% {
     right: -35%;
@@ -144,6 +176,20 @@
   100% {
     -webkit-transform: rotate(-86deg) rotateY(0deg);
     transform: rotate(-86deg) rotateY(0deg); } }
+@-webkit-keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); } }
+@-webkit-keyframes flipback-vertical-right {
+  0% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); } }
 * {
   padding: 0;
   margin: 0; }
@@ -191,8 +237,8 @@
     width: 658px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    -webkit-animation: env-disappear .4s 2.6s forwards;
-    animation: env-disappear .4s 2.6s forwards; }
+    -webkit-animation: env-disappear .5s 2.6s forwards;
+    animation: env-disappear .5s 2.6s forwards; }
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
@@ -209,8 +255,8 @@
     transform: rotate(-90deg);
     top: -70px;
     left: 150px;
-    -webkit-animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards, card-back-rotate 1s 6.5s forwards;
-    animation: card-advance 1.5s 2.8s forwards, card-rotate 1s 4.5s forwards, card-back-rotate 1s 6.5s forwards;
+    -webkit-animation: card-advance 1.5s 2.8s forwards, flip-vertical-right 0.4s 4.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards, flipback-vertical-right 0.4s 5.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    animation: card-advance 1.5s 2.8s forwards, flip-vertical-right 0.4s 4.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards, flipback-vertical-right 0.4s 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
     .envelope-back .card .card-front {
@@ -221,8 +267,7 @@
       height: 100%;
       z-index: 2;
       -webkit-transform: rotateY(0deg);
-      transform: rotateY(0deg);
-      -webkit-animation: env-disappear .2s 4.6s forwards, env-appear .2s 6.6s forwards; }
+      transform: rotateY(0deg); }
     .envelope-back .card .card-back {
       position: absolute;
       top: 0;
