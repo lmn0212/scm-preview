@@ -25,10 +25,10 @@
   0% {
     transform: rotate3d(0, 0, 1, 0deg); }
   100% {
-    transform: rotate3d(0, 1, 0, 92deg); } }
+    transform: rotate3d(0, 1, 0, 90deg); } }
 @keyframes env-rotate-front {
   0% {
-    transform: rotate3d(0, 1, 0, 92deg);
+    transform: rotate3d(0, 1, 0, 90deg);
     right: 50%; }
   100% {
     transform: rotate3d(0, 1, 0, 180deg);
@@ -108,12 +108,12 @@
     opacity: 1; } }
 @-webkit-keyframes env-rotate-back {
   0% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg); }
+    -webkit-transform: rotate3d(0, 0, 1, 0deg); }
   100% {
-    -webkit-transform: rotate3d(0, 1, 0, 92deg); } }
+    -webkit-transform: rotate3d(0, 1, 0, 90deg); } }
 @-webkit-keyframes env-rotate-front {
   0% {
-    -webkit-transform: rotate3d(0, 1, 0, 92deg);
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
     right: 50%; }
   100% {
     -webkit-transform: rotate3d(0, 1, 0, 180deg);
@@ -123,7 +123,7 @@
     -webkit-transform: rotate(0deg);
     right: 25%; }
   100% {
-    -webkit-transform: rotate(85deg);
+    -webkit-transform: rotate(90deg);
     right: 35%; } }
 @-webkit-keyframes card-advance {
   0% {

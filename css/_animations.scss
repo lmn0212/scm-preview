@@ -18,10 +18,10 @@
 
 @keyframes env-rotate-back {
   0% {transform: rotate3d(0, 0, 1, 0deg);}
-  100% {transform: rotate3d(0, 1, 0, 92deg);}
+  100% {transform: rotate3d(0, 1, 0, 90deg);}
 }
 @keyframes env-rotate-front {
-  0% {transform: rotate3d(0, 1, 0, 92deg);right:50%;}
+  0% {transform: rotate3d(0, 1, 0, 90deg);right:50%;}
   100% {transform: rotate3d(0, 1, 0, 180deg);right: 33%;}
 }
 @keyframes put-aside {
@@ -69,17 +69,17 @@
 }
 
 @-webkit-keyframes env-rotate-back {
-  0% {-webkit-transform: rotate3d(0, 0, 1, 5deg);}
-  100% {-webkit-transform: rotate3d(0, 1, 0, 92deg);}
+  0% {-webkit-transform: rotate3d(0, 0, 1, 0deg);}
+  100% {-webkit-transform: rotate3d(0, 1, 0, 90deg);}
 }
 @-webkit-keyframes env-rotate-front {
-  0% {-webkit-transform: rotate3d(0, 1, 0, 92deg);right:50%;}
+  0% {-webkit-transform: rotate3d(0, 1, 0, 90deg);right:50%;}
   100% {-webkit-transform: rotate3d(0, 1, 0, 180deg);right: 33%;}
 }
 @-webkit-keyframes put-aside {
   0% {-webkit-transform: rotate(0deg);right: 25%}
   //50% {-webkit-transform: rotate(42.5deg);-webkit-transform-origin: center center;}
-  100% {-webkit-transform: rotate(85deg);right: 35%}
+  100% {-webkit-transform: rotate(90deg);right: 35%}
 }
 @-webkit-keyframes card-advance {
   0% {top: -85px; left:125px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
