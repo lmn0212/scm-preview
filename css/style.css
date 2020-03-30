@@ -68,38 +68,6 @@
   100% {
     -webkit-transform: rotate(-86deg) rotateY(0deg);
     transform: rotate(-86deg) rotateY(0deg); } }
-@keyframes flip-vertical-right {
-  0% {
-    -webkit-transform: rotate(-86deg) rotateY(0);
-    transform: rotate(-86deg) rotateY(0); }
-  100% {
-    -webkit-transform: rotate(-86deg) rotateY(180deg);
-    transform: rotate(-86deg) rotateY(180deg); } }
-@keyframes flipback-vertical-right {
-  0% {
-    -webkit-transform: rotate(-86deg) rotateY(180deg);
-    transform: rotate(-86deg) rotateY(180deg); }
-  100% {
-    -webkit-transform: rotate(-86deg) rotateY(0deg);
-    transform: rotate(-86deg) rotateY(0deg); } }
-@keyframes flip-in-ver-right {
-  0% {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    opacity: 0; }
-  100% {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    opacity: 1; } }
-@keyframes flip-out-ver-right {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-    opacity: 1; }
-  100% {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    opacity: 0; } }
 @-webkit-keyframes env-front-appear {
   0% {
     right: -35%;
@@ -176,20 +144,6 @@
   100% {
     -webkit-transform: rotate(-86deg) rotateY(0deg);
     transform: rotate(-86deg) rotateY(0deg); } }
-@-webkit-keyframes flip-vertical-right {
-  0% {
-    -webkit-transform: rotate(-86deg) rotateY(0);
-    transform: rotate(-86deg) rotateY(0); }
-  100% {
-    -webkit-transform: rotate(-86deg) rotateY(180deg);
-    transform: rotate(-86deg) rotateY(180deg); } }
-@-webkit-keyframes flipback-vertical-right {
-  0% {
-    -webkit-transform: rotate(-86deg) rotateY(180deg);
-    transform: rotate(-86deg) rotateY(180deg); }
-  100% {
-    -webkit-transform: rotate(-86deg) rotateY(0deg);
-    transform: rotate(-86deg) rotateY(0deg); } }
 * {
   padding: 0;
   margin: 0; }
@@ -255,10 +209,8 @@
     transform: rotate(-90deg);
     top: -70px;
     left: 150px;
-    -webkit-animation: card-advance 1.5s 2.8s forwards, flip-vertical-right 0.4s 4.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards, flipback-vertical-right 0.4s 5.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-    animation: card-advance 1.5s 2.8s forwards, flip-vertical-right 0.4s 4.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards, flipback-vertical-right 0.4s 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d; }
+    -webkit-animation: card-advance 1.5s 3.2s forwards;
+    animation: card-advance 1.5s 3.2s forwards; }
     .envelope-back .card .card-front {
       position: absolute;
       top: 0;
@@ -268,14 +220,12 @@
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
-      -webkit-animation: env-disappear 0.4s 4.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards, env-appear 0.4s 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+      animation: flipOutY .6s 4.7s forwards, flipInY .6s 6.5s forwards; }
     .envelope-back .card .card-back {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
+      height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
