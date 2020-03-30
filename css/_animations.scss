@@ -83,8 +83,8 @@
 }
 @-webkit-keyframes card-advance {
   0% {top: -85px; left:125px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
-  50% {top: -470px; -webkit-transform: rotate(-86deg); transform: rotate(-86deg);}
-  100% {top: -40px; left:180px; -webkit-transform: rotate(-86deg); transform: rotate(-86deg);z-index: 1}
+  50% {top: -470px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+  100% {top: -40px; left:180px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);z-index: 1}
 }
 @-webkit-keyframes card-rotate {
   0% {-webkit-transform: rotate(-86deg) rotateY(0deg); transform: rotate(-86deg) rotateY(0deg);}
