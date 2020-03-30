@@ -29,7 +29,7 @@
   100% {transform: rotate(90deg);right: 35%}
 }
 @keyframes card-advance {
-  0% {top: -70px; left:125px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+  0% {top: -85px; left:125px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
   50% {top: -470px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
   100% {top: -40px; left:180px; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);z-index: 1}
 }

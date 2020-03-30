@@ -42,7 +42,7 @@
     right: 35%; } }
 @keyframes card-advance {
   0% {
-    top: -70px;
+    top: -85px;
     left: 125px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg); }
