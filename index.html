@@ -21,7 +21,7 @@
             <div class="card-front" style="background: url('media/GHBMenBabochkaRubashkaLitso.jpg') no-repeat; background-size: contain;"></div>
         </div>
         <div class="cover-back" style="background: url('media/card-envelope-over.png') no-repeat; background-size: contain;"></div>
-        <div class="cover-top" style="background: url('media/card-envelope-under_.png') no-repeat; background-size: contain;"></div>
+        <div class="cover-top" style="background: url('media/card-envelope-under_rev.png') no-repeat; background-size: contain;"></div>
     </div>
 </section>
 </body>
@@ -31,7 +31,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 <script type="text/javascript">
-
+    const $screenWidth = $(window).width();
     $( document ).ready(function() {
         $('.envelope-front').animate({ rotateAngle: 90 }, {
             step: function(now,fx) {
@@ -54,7 +54,49 @@
                 $elem.css({
                     transform: 'rotateY(' + now + 'deg)'
                 });
-            }
+            },
+            easing: 'linear',
+            complete:  setTimeout(rotateEnv, 2000)
         });
+    }
+    function rotateEnv() {
+        let $rightOffset;
+        if ($screenWidth < 1600 && $screenWidth > 1200) {
+            $rightOffset = '30%'
+        } else if ($screenWidth < 1200) {
+            $rightOffset = '23%'
+        } else {
+            $rightOffset = '36%'
+        }
+        $('.envelope-back').animate({ right: $rightOffset, rotateAngle: 90 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotate('+now+'deg)');
+                $(this).css('-moz-transform','rotate('+now+'deg)');
+                $(this).css('transform','rotate('+now+'deg)');
+            },
+            duration:1500,
+            easing: 'linear',
+            complete:  setTimeout(openEnv, 1000)
+        });
+    }
+    function openEnv() {
+        // $('.cover-top').animate({rotateAngle: -180 }, {
+        //     step: function(now,fx) {
+        //         $(this).css({'-webkit-transform': 'rotateX('+now+'deg)','transform-origin': 'top'});
+        //         $(this).css({'-moz-transform':'rotateX('+now+'deg)','transform-origin': 'top'});
+        //         $(this).css({'transform':'rotateX('+now+'deg)','transform-origin': 'top'});
+        //     },
+        //     duration: 1500,
+        //     easing: 'linear'
+        // });
+        $('.cover-top').animate({opacity: 0}, 200, 'linear', backwallAppear );
+
+    }
+
+    function backwallAppear() {
+        $('.backwall-env').animate({opacity: 1}, 200, cardMove );
+    }
+    function cardMove() {
+        console.log('move');
     }
 </script>

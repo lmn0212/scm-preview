@@ -211,9 +211,7 @@
     position: absolute;
     top: 0;
     height: 280px;
-    width: 630px;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); }
+    width: 630px; }
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
