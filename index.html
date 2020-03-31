@@ -16,7 +16,7 @@
     <div class="envelope-back">
         <div class="backwall-env" style="background: url('media/card-envelope-under.png') no-repeat; background-size: contain;"></div>
         <div class="inner-back"></div>
-        <div class="card">
+        <div id="card">
             <div class="card-back" style="background: url('media/GHBMenBabochkaRubashkaOborot.jpg') no-repeat; background-size: contain;"></div>
             <div class="card-front" style="background: url('media/GHBMenBabochkaRubashkaLitso.jpg') no-repeat; background-size: contain;"></div>
         </div>
@@ -30,6 +30,7 @@
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
+
 <script type="text/javascript">
     const $screenWidth = $(window).width();
     $( document ).ready(function() {
@@ -97,12 +98,34 @@
         $('.backwall-env').animate({opacity: 1}, 200, cardMove );
     }
     function cardMove() {
-        console.log('sdf');
-        let card = $('.card');
+        let card = $('#card');
         card.animate({top:'-480px'}, 1500);
         setTimeout(function () {
             card.css('z-index', '1');
         }, 1500);
-        card.animate({top:'-40px', left:'180px'}, 1500);
+        card.animate({top:'-40px', left:'180px'}, 1500, cardFlip);
+    }
+    function cardFlip() {
+        $('#card').animate({ rotateAngle: 180 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotateX('+now+'deg) rotate(-90deg)');
+                $(this).css('-moz-transform','rotateX('+now+'deg) rotate(-90deg)');
+                $(this).css('transform','rotateX('+now+'deg) rotate(-90deg)');
+            },
+            duration:1500,
+            easing: 'linear',
+            complete:  setTimeout(cardBackFlip, 2000)
+        });
+    }
+    function cardBackFlip() {
+        $('#card').animate({ rotateAngle: 0 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotateX('+now+'deg) rotate(-90deg)');
+                $(this).css('-moz-transform','rotateX('+now+'deg) rotate(-90deg)');
+                $(this).css('transform','rotateX('+now+'deg) rotate(-90deg)');
+            },
+            duration:1500,
+            easing: 'linear'
+        });
     }
 </script>

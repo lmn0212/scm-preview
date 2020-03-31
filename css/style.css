@@ -218,28 +218,33 @@
     top: -290px;
     height: 680px;
     width: 658px; }
-  .envelope-back .card {
+  .envelope-back #card {
     position: absolute;
+    transform-style: preserve-3d;
     width: 395px;
     height: 570px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     top: -85px;
     left: 125px; }
-    .envelope-back .card .card-front {
+    .envelope-back #card .card-front {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      backface-visibility: hidden;
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg); }
-    .envelope-back .card .card-back {
+    .envelope-back #card .card-back {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
 
 /*# sourceMappingURL=style.css.map */
