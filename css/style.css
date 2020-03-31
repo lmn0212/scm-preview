@@ -234,7 +234,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      backface-visibility: hidden;
       z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg); }
@@ -244,8 +243,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      backface-visibility: hidden;
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
+      -webkit-transform: rotateY(-90deg);
+      transform: rotateY(-90deg); }
 
 /*# sourceMappingURL=style.css.map */

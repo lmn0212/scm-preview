@@ -106,26 +106,58 @@
         card.animate({top:'-40px', left:'180px'}, 1500, cardFlip);
     }
     function cardFlip() {
-        $('#card').animate({ rotateAngle: 180 }, {
+        $('.card-front').animate({ rotateAngle: 90 }, {
             step: function(now,fx) {
-                $(this).css('-webkit-transform','rotateX('+now+'deg) rotate(-90deg)');
-                $(this).css('-moz-transform','rotateX('+now+'deg) rotate(-90deg)');
-                $(this).css('transform','rotateX('+now+'deg) rotate(-90deg)');
+                $(this).css('-webkit-transform','rotateY('+now+'deg)');
+                $(this).css('-moz-transform','rotateY('+now+'deg)');
+                $(this).css('transform','rotateY('+now+'deg)');
             },
             duration:1500,
             easing: 'linear',
-            complete:  setTimeout(cardBackFlip, 2000)
+            complete:  showCardBack
         });
     }
-    function cardBackFlip() {
-        $('#card').animate({ rotateAngle: 0 }, {
+    function showCardBack() {
+        $('.card-front').animate({opacity: 0});
+        var $elem = $('.card-back');
+        $elem.animate({opacity: 1});
+        $({deg: -90}).animate({deg: 0}, {
+            duration: 1500,
+            step: function(now) {
+                $elem.css({
+                    transform: 'rotateY(' + now + 'deg)'
+                });
+            },
+            easing: 'linear',
+            complete:  setTimeout(cardReturnFlip, 2000)
+        });
+    }
+    function cardReturnFlip() {
+        $('.card-back').animate({ rotateAngle: 90 }, {
             step: function(now,fx) {
-                $(this).css('-webkit-transform','rotateX('+now+'deg) rotate(-90deg)');
-                $(this).css('-moz-transform','rotateX('+now+'deg) rotate(-90deg)');
-                $(this).css('transform','rotateX('+now+'deg) rotate(-90deg)');
+                $(this).css('-webkit-transform','rotateY('+now+'deg)');
+                $(this).css('-moz-transform','rotateY('+now+'deg)');
+                $(this).css('transform','rotateY('+now+'deg)');
             },
             duration:1500,
-            easing: 'linear'
+            easing: 'linear',
+            complete:  showCardBackReturn
         });
     }
+    function showCardBackReturn() {
+        $('.card-back').animate({opacity: 0});
+        var $elem = $('.card-front');
+        $elem.animate({opacity: 1});
+        $({deg: -90}).animate({deg: 0}, {
+            duration: 1500,
+            step: function(now) {
+                $elem.css({
+                    transform: 'rotateY(' + now + 'deg)'
+                });
+            },
+            easing: 'linear',
+            // complete:  setTimeout(rotateEnv, 2000)
+        });
+    }
+
 </script>
