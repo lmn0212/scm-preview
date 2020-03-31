@@ -16,7 +16,7 @@
 
 .envelope-front {
   position: absolute;
-  right: 30%;
+  right: 33%;
   top: 25%;
   //-webkit-animation: env-disappear .7s 1s forwards,
   //env-rotate-back 1.2s 1s forwards;
@@ -32,8 +32,11 @@
     text-align: center;
     padding-top: 30%;
   }
-  @media screen and (max-width: 1400px) {
-    right: 25%;
+  @media screen and (max-width: 1600px) {
+    right: 27%;
+  }
+  @media screen and (max-width: 1200px) {
+    right: 21%;
   }
 }
 
@@ -45,9 +48,8 @@
   width: 769px;
   opacity: 0;
   top: 25%;
-  right: 30%;
-  transform: rotateY(-80deg);
-  //right: 25%;
+  right: 28%;
+  transform: rotateY(-90deg);
   //-webkit-transform-origin: center center;
   //transform-origin: center center;
   //-webkit-animation: env-appear 1s 1.2s forwards,
@@ -56,7 +58,12 @@
   //animation: env-appear 1s 1.2s forwards,
   //env-rotate-front 1.5s 1s forwards,
   //put-aside 1s 2.6s forwards;
-
+  @media screen and (max-width: 1600px) {
+    right: 20%;
+  }
+  @media screen and (max-width: 1200px) {
+    right: 12%;
+  }
   .cover-back {
     position: absolute;
     height: 460px;

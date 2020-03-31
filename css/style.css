@@ -173,7 +173,7 @@
 
 .envelope-front {
   position: absolute;
-  right: 30%;
+  right: 33%;
   top: 25%; }
   .envelope-front .image {
     height: 406px;
@@ -182,9 +182,12 @@
     font-size: 45px;
     text-align: center;
     padding-top: 30%; }
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1600px) {
     .envelope-front {
-      right: 25%; } }
+      right: 27%; } }
+  @media screen and (max-width: 1200px) {
+    .envelope-front {
+      right: 21%; } }
 
 .envelope-back {
   position: absolute;
@@ -192,8 +195,14 @@
   width: 769px;
   opacity: 0;
   top: 25%;
-  right: 30%;
-  transform: rotateY(-80deg); }
+  right: 28%;
+  transform: rotateY(-90deg); }
+  @media screen and (max-width: 1600px) {
+    .envelope-back {
+      right: 20%; } }
+  @media screen and (max-width: 1200px) {
+    .envelope-back {
+      right: 12%; } }
   .envelope-back .cover-back {
     position: absolute;
     height: 460px;

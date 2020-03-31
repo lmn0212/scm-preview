@@ -33,13 +33,13 @@
 <script type="text/javascript">
 
     $( document ).ready(function() {
-        $('.envelope-front').animate({ rotateAngle: 86 }, {
+        $('.envelope-front').animate({ rotateAngle: 90 }, {
             step: function(now,fx) {
                 $(this).css('-webkit-transform','rotateY('+now+'deg)');
                 $(this).css('-moz-transform','rotateY('+now+'deg)');
                 $(this).css('transform','rotateY('+now+'deg)');
             },
-            duration:2000,
+            duration:1500,
             easing: 'linear',
             complete:  backenvelope
         });
@@ -48,8 +48,8 @@
         $('.envelope-front').animate({opacity: 0});
         var $elem = $('.envelope-back');
         $elem.animate({opacity: 1});
-        $({deg: -80}).animate({deg: 0}, {
-            duration: 2000,
+        $({deg: -90}).animate({deg: 0}, {
+            duration: 1500,
             step: function(now) {
                 $elem.css({
                     transform: 'rotateY(' + now + 'deg)'
