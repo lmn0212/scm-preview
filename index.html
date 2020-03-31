@@ -27,10 +27,12 @@
 </body>
 </html>
 
-<!--<script type="text/javascript">-->
-    <!--function atload () {-->
-        <!--let mainObject =  document.getElementsByClassName("envelope-back");-->
-        <!--mainObject[0].classList.add("toanimate");-->
-    <!--}-->
-    <!--window.onload  = atload;-->
-<!--</script>-->
+<script type="text/javascript">
+    function atload () {
+        let mainObject =  document.getElementsByClassName("envelope-back");
+        let minObject =  document.getElementsByClassName("envelope-front");
+        mainObject[0].classList.add("toanimate");
+        minObject[0].classList.add("toanimate");
+    }
+    window.onload  = atload;
+</script>

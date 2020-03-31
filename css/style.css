@@ -171,24 +171,24 @@
   perspective: 950px;
   overflow: hidden; }
 
-.envelope-front {
+.envelope-front.toanimate {
   position: absolute;
   right: 30%;
   top: 25%;
   -webkit-animation: env-disappear .7s 1s forwards, env-rotate-back 1.2s 1s forwards;
   animation: env-disappear 1s 1s forwards, env-rotate-back 1.5s 1s forwards; }
-  .envelope-front .image {
+  .envelope-front.toanimate .image {
     height: 460px;
     width: 630px; }
-  .envelope-front p {
+  .envelope-front.toanimate p {
     font-size: 45px;
     text-align: center;
     padding-top: 30%; }
   @media screen and (max-width: 1400px) {
-    .envelope-front {
+    .envelope-front.toanimate {
       right: 25%; } }
 
-.envelope-back {
+.envelope-back.toanimate {
   position: absolute;
   height: 717px;
   width: 769px;
@@ -198,11 +198,11 @@
   transform-origin: center center;
   -webkit-animation: env-appear 1s 1.2s forwards, env-rotate-front 1s 1.2s forwards, put-aside 1s 2.6s forwards;
   animation: env-appear 1s 1.2s forwards, env-rotate-front 1.5s 1s forwards, put-aside 1s 2.6s forwards; }
-  .envelope-back .cover-back {
+  .envelope-back.toanimate .cover-back {
     position: absolute;
     height: 460px;
     width: 630px; }
-  .envelope-back .cover-top {
+  .envelope-back.toanimate .cover-top {
     position: absolute;
     top: 0;
     height: 280px;
@@ -211,7 +211,7 @@
     transform: rotate(180deg);
     -webkit-animation: env-disappear 1s 3s forwards;
     animation: env-disappear 1s 3s forwards; }
-  .envelope-back .backwall-env {
+  .envelope-back.toanimate .backwall-env {
     position: absolute;
     opacity: 0;
     top: -290px;
@@ -219,7 +219,7 @@
     width: 658px;
     -webkit-animation: env-appear 1.5s 3s forwards;
     animation: env-appear 1.5s 3s forwards; }
-  .envelope-back .card {
+  .envelope-back.toanimate .card {
     position: absolute;
     width: 395px;
     height: 570px;
@@ -229,7 +229,7 @@
     left: 125px;
     -webkit-animation: card-advance 1.5s 4s forwards;
     animation: card-advance 1.5s 4s forwards; }
-    .envelope-back .card .card-front {
+    .envelope-back.toanimate .card .card-front {
       position: absolute;
       top: 0;
       left: 0;
@@ -240,7 +240,7 @@
       transform: rotateY(0deg);
       -webkit-animation: flipOutY 1s 6s forwards, env-appear 1s 8s forwards, back-flip 1s 8.1s forwards;
       animation: flipOutY 1s 6s forwards, env-appear 1s 8s forwards, back-flip 1s 8.1s forwards; }
-    .envelope-back .card .card-back {
+    .envelope-back.toanimate .card .card-back {
       position: absolute;
       top: 0;
       left: 0;
