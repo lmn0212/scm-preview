@@ -226,7 +226,8 @@
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     top: -85px;
-    left: 125px; }
+    left: 125px;
+    perspective: 1140px; }
     .envelope-back #card .card-front {
       position: absolute;
       top: 0;
