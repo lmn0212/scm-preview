@@ -220,7 +220,6 @@
     width: 658px; }
   .envelope-back #card {
     position: absolute;
-    transform-style: preserve-3d;
     width: 395px;
     height: 570px;
     -webkit-transform: rotate(-90deg);
@@ -234,7 +233,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg); }
     .envelope-back #card .card-back {
@@ -243,7 +241,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
       -webkit-transform: rotateY(-90deg);
       transform: rotateY(-90deg); }
 

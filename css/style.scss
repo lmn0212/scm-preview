@@ -93,7 +93,6 @@
 
   #card {
     position: absolute;
-    transform-style: preserve-3d;
     width: 395px;
     height: 570px;
     -webkit-transform: rotate(-90deg);
@@ -114,7 +113,6 @@
       height: 100%;
       //backface-visibility: hidden;
 
-      z-index: 2;
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
       //-webkit-animation: flipOutY 1s 6s forwards, env-appear 1s 8s forwards, back-flip 1s 8.1s forwards;
@@ -127,7 +125,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
       //backface-visibility: hidden;
       //
       -webkit-transform: rotateY(-90deg);
