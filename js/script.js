@@ -67,7 +67,7 @@ function cardMove() {
     let card = $('#card');
     card.animate({top:'-480px'}, 1500);
     setTimeout(function () {
-        card.css('z-index', '1');
+        card.css('z-index', '2');
     }, 1500);
     card.animate({top:'-40px', left:'180px'}, 1500, cardFlip);
 }
