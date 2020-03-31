@@ -26,13 +26,35 @@
 </section>
 </body>
 </html>
-
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 <script type="text/javascript">
-    function atload () {
-        let mainObject =  document.getElementsByClassName("envelope-back");
-        let minObject =  document.getElementsByClassName("envelope-front");
-        mainObject[0].classList.add("toanimate");
-        minObject[0].classList.add("toanimate");
+
+    $( document ).ready(function() {
+        $('.envelope-front').animate({ rotateAngle: 90 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotateY('+now+'deg)');
+                $(this).css('-moz-transform','rotateY('+now+'deg)');
+                $(this).css('transform','rotateY('+now+'deg)');
+            },
+            duration:2000,
+            easing: 'linear',
+            complete:  backenvelope
+        });
+    });
+    function backenvelope() {
+        $('.envelope-front').animate({opacity: 0});
+        var $elem = $('.envelope-back');
+        $elem.animate({opacity: 1});
+        $({deg: -80}).animate({deg: 0}, {
+            duration: 2000,
+            step: function(now) {
+                $elem.css({
+                    transform: 'rotateY(' + now + 'deg)'
+                });
+            }
+        });
     }
-    window.onload  = atload;
 </script>
