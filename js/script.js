@@ -68,7 +68,7 @@ function cardMove() {
     card.animate({top:'-480px'}, 1500);
     setTimeout(function () {
         card.css('z-index', '1');
-    }, 2500);
+    }, 1500);
     card.animate({top:'-40px', left:'180px'}, 1500, cardFlip);
 }
 function cardFlip() {
