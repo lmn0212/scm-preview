@@ -21,7 +21,7 @@
             <div class="card-front" style="background: url('media/GHBMenBabochkaRubashkaLitso.jpg') no-repeat; background-size: contain;"></div>
         </div>
         <div class="cover-back" style="background: url('media/card-envelope-over.png') no-repeat; background-size: contain;"></div>
-        <div class="cover-top" style="background: url('media/card-envelope-under_rev.png') no-repeat; background-size: contain;"></div>
+        <div class="cover-top" style="background: url('media/card-envelope-under_.png') no-repeat; background-size: contain;"></div>
     </div>
 </section>
 </body>
@@ -97,6 +97,12 @@
         $('.backwall-env').animate({opacity: 1}, 200, cardMove );
     }
     function cardMove() {
-        console.log('move');
+        console.log('sdf');
+        let card = $('.card');
+        card.animate({top:'-480px'}, 1500);
+        setTimeout(function () {
+            card.css('z-index', '1');
+        }, 1500);
+        card.animate({top:'-40px', left:'180px'}, 1500);
     }
 </script>
