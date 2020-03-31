@@ -18,12 +18,17 @@
   top: 25%;
   -webkit-animation: env-disappear .7s 1s forwards,
   env-rotate-back 1.2s 1s forwards;
-  animation: env-disappear .7s 1s forwards,
-  env-rotate-back 1.2s 1s forwards;
-
+  animation: env-disappear 1s 1s forwards,
+  env-rotate-back 1.5s 1s forwards;
   .image {
     height: 460px;
-    width: 658px;
+    width: 630px;
+  }
+
+  p {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 30%;
   }
   @media screen and (max-width: 1400px) {
     right: 25%;
@@ -45,7 +50,7 @@
   env-rotate-front 1s 1.2s forwards,
   put-aside 1s 2.6s forwards;
   animation: env-appear 1s 1.2s forwards,
-  env-rotate-front 1s 1.2s forwards,
+  env-rotate-front 1.5s 1s forwards,
   put-aside 1s 2.6s forwards;
 
   .cover-back {

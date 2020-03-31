@@ -1,9 +1,9 @@
 @keyframes env-front-appear {
-  0%   {right: -35%; opacity: 0}
+  0%   {opacity: 0}
   30%  {opacity: 0}
   40%  {opacity: 100%}
   95%  {opacity: 100%}
-  100% {right: 35%; opacity: 0}
+  100% {opacity: 0}
 }
 
 @keyframes env-disappear {
