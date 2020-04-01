@@ -56,10 +56,10 @@ function openEnv() {
         duration: 900,
         easing: 'linear'
     });
-    $('.cover-top').animate({opacity: 0}, 900, 'linear');
+    $('.cover-top').animate({opacity: 0}, 800, 'linear');
     setTimeout(function () {
-        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 600) );
-    }, 900)
+        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 700) );
+    }, 800)
 }
 
 function backwallAppear() {
