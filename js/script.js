@@ -47,7 +47,7 @@ function rotateEnv() {
     });
 }
 function openEnv() {
-    $('.cover-top').animate({rotateAngle: -180 }, {
+    $('.cover-top').animate({rotateAngle: 180 }, {
         step: function(now,fx) {
             $(this).css({'-webkit-transform': 'rotateX('+now+'deg)','transform-origin': 'top'});
             $(this).css({'-moz-transform':'rotateX('+now+'deg)','transform-origin': 'top'});
