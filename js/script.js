@@ -6,7 +6,7 @@ $( document ).ready(function() {
             $(this).css('-moz-transform','rotateY('+now+'deg)');
             $(this).css('transform','rotateY('+now+'deg)');
         },
-        duration:1500,
+        duration:1000,
         easing: 'linear',
         complete:  backenvelope
     });
@@ -16,14 +16,14 @@ function backenvelope() {
     var $elem = $('.envelope-back');
     $elem.animate({opacity: 1});
     $({deg: -90}).animate({deg: 0}, {
-        duration: 1500,
+        duration: 1000,
         step: function(now) {
             $elem.css({
                 transform: 'rotateY(' + now + 'deg)'
             });
         },
         easing: 'linear',
-        complete:  setTimeout(rotateEnv, 2000)
+        complete:  setTimeout(rotateEnv, 1700)
     });
 }
 function rotateEnv() {
@@ -41,7 +41,7 @@ function rotateEnv() {
             $(this).css('-moz-transform','rotate('+now+'deg)');
             $(this).css('transform','rotate('+now+'deg)');
         },
-        duration:1500,
+        duration:1000,
         easing: 'linear',
         complete:  setTimeout(openEnv, 1000)
     });
@@ -65,10 +65,10 @@ function backwallAppear() {
 }
 function cardMove() {
     let card = $('#card');
-    card.animate({top:'-480px'}, 1500);
+    card.animate({top:'-480px'}, 1000);
     setTimeout(function () {
         card.css('z-index', '2');
-    }, 1500);
+    }, 1000);
     card.animate({top:'-40px', left:'180px'}, 1500, cardFlip);
 }
 function cardFlip() {
@@ -78,7 +78,7 @@ function cardFlip() {
             $(this).css('-moz-transform','rotateY('+now+'deg)');
             $(this).css('transform','rotateY('+now+'deg)');
         },
-        duration:1500,
+        duration:1000,
         easing: 'linear',
         complete:  showCardBack
     });
@@ -88,7 +88,7 @@ function showCardBack() {
     var $elem = $('.card-back');
     $elem.animate({opacity: 1});
     $({deg: -90}).animate({deg: 0}, {
-        duration: 1500,
+        duration: 1000,
         step: function(now) {
             $elem.css({
                 transform: 'rotateY(' + now + 'deg)'
@@ -105,7 +105,7 @@ function cardReturnFlip() {
             $(this).css('-moz-transform','rotateY('+now+'deg)');
             $(this).css('transform','rotateY('+now+'deg)');
         },
-        duration:1500,
+        duration:1000,
         easing: 'linear',
         complete:  showCardBackReturn
     });
@@ -115,7 +115,7 @@ function showCardBackReturn() {
     var $elem = $('.card-front');
     $elem.animate({opacity: 1});
     $({deg: -90}).animate({deg: 0}, {
-        duration: 1500,
+        duration: 1000,
         step: function(now) {
             $elem.css({
                 transform: 'rotateY(' + now + 'deg)'
