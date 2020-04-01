@@ -192,17 +192,17 @@
 .envelope-back {
   position: absolute;
   height: 717px;
-  width: 769px;
+  width: 630px;
   opacity: 0;
   top: 25%;
-  right: 28%;
+  right: 33%;
   transform: rotateY(-90deg); }
   @media screen and (max-width: 1600px) {
     .envelope-back {
-      right: 20%; } }
+      right: 27%; } }
   @media screen and (max-width: 1200px) {
     .envelope-back {
-      right: 12%; } }
+      right: 21%; } }
   .envelope-back .cover-back {
     position: absolute;
     height: 460px;

@@ -33,7 +33,7 @@ function rotateEnv() {
     } else if ($screenWidth < 1200) {
         $rightOffset = '23%'
     } else {
-        $rightOffset = '36%'
+        $rightOffset = '39%'
     }
     $('.envelope-back').animate({ right: $rightOffset, rotateAngle: 90 }, {
         step: function(now,fx) {
