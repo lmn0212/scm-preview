@@ -53,13 +53,13 @@ function openEnv() {
             $(this).css({'-moz-transform':'rotateX('+now+'deg)','transform-origin': 'top'});
             $(this).css({'transform':'rotateX('+now+'deg)','transform-origin': 'top'});
         },
-        duration: 500,
+        duration: 900,
         easing: 'linear'
     });
-    $('.cover-top').animate({opacity: 0}, 700, 'linear');
+    $('.cover-top').animate({opacity: 0}, 1000, 'linear');
     setTimeout(function () {
-        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 500) );
-    }, 500)
+        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 600) );
+    }, 900)
 }
 
 function backwallAppear() {
