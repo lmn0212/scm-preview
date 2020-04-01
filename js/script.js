@@ -47,21 +47,23 @@ function rotateEnv() {
     });
 }
 function openEnv() {
-    // $('.cover-top').animate({rotateAngle: -180 }, {
-    //     step: function(now,fx) {
-    //         $(this).css({'-webkit-transform': 'rotateX('+now+'deg)','transform-origin': 'top'});
-    //         $(this).css({'-moz-transform':'rotateX('+now+'deg)','transform-origin': 'top'});
-    //         $(this).css({'transform':'rotateX('+now+'deg)','transform-origin': 'top'});
-    //     },
-    //     duration: 1500,
-    //     easing: 'linear'
-    // });
-    $('.cover-top').animate({opacity: 0}, 200, 'linear', backwallAppear );
-
+    $('.cover-top').animate({rotateAngle: -180 }, {
+        step: function(now,fx) {
+            $(this).css({'-webkit-transform': 'rotateX('+now+'deg)','transform-origin': 'top'});
+            $(this).css({'-moz-transform':'rotateX('+now+'deg)','transform-origin': 'top'});
+            $(this).css({'transform':'rotateX('+now+'deg)','transform-origin': 'top'});
+        },
+        duration: 500,
+        easing: 'linear'
+    });
+    $('.cover-top').animate({opacity: 0}, 700, 'linear');
+    setTimeout(function () {
+        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 500) );
+    }, 500)
 }
 
 function backwallAppear() {
-    $('.backwall-env').animate({opacity: 1}, 200, cardMove );
+    $('.backwall-env').animate({opacity: 1}, 100, cardMove );
 }
 function cardMove() {
     let card = $('#card');
