@@ -25,12 +25,23 @@
   .image {
     height: 406px;
     width: 630px;
+    @media screen and (max-width: 990px) {
+      height: 325px;
+      width: 505px;
+    }
+    @media screen and (max-width: 480px) {
+      height: 195px;
+      width: 305px;
+    }
   }
 
   p {
     font-size: 45px;
     text-align: center;
     padding-top: 30%;
+    @media screen and (max-width: 450px) {
+      font-size: 25px;
+    }
   }
   @media screen and (max-width: 1600px) {
     right: 27%;
@@ -39,11 +50,13 @@
     right: 21%;
     top: 15%;
   }
-  @media screen and (max-width: 990px) {
-    .image {
-      height: 325px;
-      width: 505px;
-    }
+  @media screen and (max-width: 480px) {
+    top: 30%;
+    right: 13%;
+  }
+  @media screen and (max-width: 350px) {
+    top: 20%;
+    right: 2%;
   }
 }
 
@@ -77,6 +90,16 @@
     height: 574px;
     width: 505px;
   }
+  @media screen and (max-width: 480px) {
+    top: 30%;
+    right: 13%;
+    height: 344px;
+    width: 305px;
+  }
+  @media screen and (max-width: 350px) {
+    top: 20%;
+    right: 2%;
+  }
   .cover-back {
     position: absolute;
     height: 460px;
@@ -84,6 +107,10 @@
     @media screen and (max-width: 990px) {
       height: 368px;
       width: 505px;
+    }
+    @media screen and (max-width: 480px) {
+      height: 221px;
+      width: 305px;
     }
   }
 
@@ -100,6 +127,10 @@
       height: 225px;
       width: 505px;
     }
+    @media screen and (max-width: 480px) {
+      height: 135px;
+      width: 305px;
+    }
   }
 
   .backwall-env {
@@ -114,6 +145,11 @@
       top:-220px;
       height: 544px;
       width: 526px;
+    }
+    @media screen and (max-width: 480px) {
+      top: -130px;
+      height: 326px;
+      width: 315px;
     }
   }
 
@@ -135,7 +171,12 @@
       top: -67px;
       left: 95px;
     }
-
+    @media screen and (max-width: 480px) {
+      top: -37px;
+      left: 55px;
+      height: 274px;
+      width: 190px;
+    }
     .card-front {
       position: absolute;
       top: 0;

@@ -178,10 +178,21 @@
   .envelope-front .image {
     height: 406px;
     width: 630px; }
+    @media screen and (max-width: 990px) {
+      .envelope-front .image {
+        height: 325px;
+        width: 505px; } }
+    @media screen and (max-width: 480px) {
+      .envelope-front .image {
+        height: 195px;
+        width: 305px; } }
   .envelope-front p {
     font-size: 45px;
     text-align: center;
     padding-top: 30%; }
+    @media screen and (max-width: 450px) {
+      .envelope-front p {
+        font-size: 25px; } }
   @media screen and (max-width: 1600px) {
     .envelope-front {
       right: 27%; } }
@@ -189,10 +200,14 @@
     .envelope-front {
       right: 21%;
       top: 15%; } }
-  @media screen and (max-width: 990px) {
-    .envelope-front .image {
-      height: 325px;
-      width: 505px; } }
+  @media screen and (max-width: 480px) {
+    .envelope-front {
+      top: 30%;
+      right: 13%; } }
+  @media screen and (max-width: 350px) {
+    .envelope-front {
+      top: 20%;
+      right: 2%; } }
 
 .envelope-back {
   position: absolute;
@@ -213,6 +228,16 @@
     .envelope-back {
       height: 574px;
       width: 505px; } }
+  @media screen and (max-width: 480px) {
+    .envelope-back {
+      top: 30%;
+      right: 13%;
+      height: 344px;
+      width: 305px; } }
+  @media screen and (max-width: 350px) {
+    .envelope-back {
+      top: 20%;
+      right: 2%; } }
   .envelope-back .cover-back {
     position: absolute;
     height: 460px;
@@ -221,6 +246,10 @@
       .envelope-back .cover-back {
         height: 368px;
         width: 505px; } }
+    @media screen and (max-width: 480px) {
+      .envelope-back .cover-back {
+        height: 221px;
+        width: 305px; } }
   .envelope-back .cover-top {
     position: absolute;
     top: 0;
@@ -230,6 +259,10 @@
       .envelope-back .cover-top {
         height: 225px;
         width: 505px; } }
+    @media screen and (max-width: 480px) {
+      .envelope-back .cover-top {
+        height: 135px;
+        width: 305px; } }
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
@@ -241,6 +274,11 @@
         top: -220px;
         height: 544px;
         width: 526px; } }
+    @media screen and (max-width: 480px) {
+      .envelope-back .backwall-env {
+        top: -130px;
+        height: 326px;
+        width: 315px; } }
   .envelope-back #card {
     position: absolute;
     height: 570px;
@@ -256,6 +294,12 @@
         width: 316px;
         top: -67px;
         left: 95px; } }
+    @media screen and (max-width: 480px) {
+      .envelope-back #card {
+        top: -37px;
+        left: 55px;
+        height: 274px;
+        width: 190px; } }
     .envelope-back #card .card-front {
       position: absolute;
       top: 0;
