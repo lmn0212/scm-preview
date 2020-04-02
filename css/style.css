@@ -187,7 +187,12 @@
       right: 27%; } }
   @media screen and (max-width: 1200px) {
     .envelope-front {
-      right: 21%; } }
+      right: 21%;
+      top: 15%; } }
+  @media screen and (max-width: 990px) {
+    .envelope-front .image {
+      height: 325px;
+      width: 505px; } }
 
 .envelope-back {
   position: absolute;
@@ -202,31 +207,55 @@
       right: 27%; } }
   @media screen and (max-width: 1200px) {
     .envelope-back {
-      right: 21%; } }
+      right: 21%;
+      top: 15%; } }
+  @media screen and (max-width: 990px) {
+    .envelope-back {
+      height: 574px;
+      width: 505px; } }
   .envelope-back .cover-back {
     position: absolute;
     height: 460px;
     width: 630px; }
+    @media screen and (max-width: 990px) {
+      .envelope-back .cover-back {
+        height: 368px;
+        width: 505px; } }
   .envelope-back .cover-top {
     position: absolute;
     top: 0;
     height: 280px;
     width: 630px; }
+    @media screen and (max-width: 990px) {
+      .envelope-back .cover-top {
+        height: 225px;
+        width: 505px; } }
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
     top: -290px;
     height: 680px;
     width: 658px; }
+    @media screen and (max-width: 990px) {
+      .envelope-back .backwall-env {
+        top: -220px;
+        height: 544px;
+        width: 526px; } }
   .envelope-back #card {
     position: absolute;
-    width: 395px;
     height: 570px;
+    width: 395px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     top: -85px;
     left: 125px;
     perspective: 1140px; }
+    @media screen and (max-width: 990px) {
+      .envelope-back #card {
+        height: 456px;
+        width: 316px;
+        top: -67px;
+        left: 95px; } }
     .envelope-back #card .card-front {
       position: absolute;
       top: 0;

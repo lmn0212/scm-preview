@@ -28,10 +28,8 @@ function backenvelope() {
 }
 function rotateEnv() {
     let $rightOffset;
-    if ($screenWidth < 1600 && $screenWidth > 1200) {
+    if ($screenWidth < 1600 && $screenWidth > 1000) {
         $rightOffset = '30%'
-    } else if ($screenWidth < 1200) {
-        $rightOffset = '23%'
     } else {
         $rightOffset = '39%'
     }
@@ -62,9 +60,9 @@ function openEnv() {
     }, 400)
 }
 
-function backwallAppear() {
-    $('.backwall-env').animate({opacity: 1}, 100, cardMove );
-}
+// function backwallAppear() {
+//     $('.backwall-env').animate({opacity: 1}, 100, cardMove );
+// }
 function cardMove() {
     let card = $('#card');
     card.animate({top:'-480px'}, 700);

@@ -37,6 +37,13 @@
   }
   @media screen and (max-width: 1200px) {
     right: 21%;
+    top: 15%;
+  }
+  @media screen and (max-width: 990px) {
+    .image {
+      height: 325px;
+      width: 505px;
+    }
   }
 }
 
@@ -64,11 +71,20 @@
   }
   @media screen and (max-width: 1200px) {
     right: 21%;
+    top: 15%;
+  }
+  @media screen and (max-width: 990px) {
+    height: 574px;
+    width: 505px;
   }
   .cover-back {
     position: absolute;
     height: 460px;
     width: 630px;
+    @media screen and (max-width: 990px) {
+      height: 368px;
+      width: 505px;
+    }
   }
 
   .cover-top {
@@ -80,6 +96,10 @@
     //transform: rotate(-180deg);
     //-webkit-animation: env-disappear 1s 3s forwards;
     //animation: env-disappear 1s 3s forwards;
+    @media screen and (max-width: 990px) {
+      height: 225px;
+      width: 505px;
+    }
   }
 
   .backwall-env {
@@ -90,12 +110,17 @@
     width: 658px;
     //-webkit-animation: env-appear 1.5s 3s forwards;
     //animation: env-appear 1.5s 3s forwards;
+    @media screen and (max-width: 990px) {
+      top:-220px;
+      height: 544px;
+      width: 526px;
+    }
   }
 
   #card {
     position: absolute;
-    width: 395px;
     height: 570px;
+    width: 395px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     top: -85px;
@@ -104,7 +129,12 @@
 
     //-webkit-animation: card-advance 1.5s 4s forwards;
     //animation: card-advance 1.5s 4s forwards;
-
+    @media screen and (max-width: 990px) {
+      height: 456px;
+      width: 316px;
+      top: -67px;
+      left: 95px;
+    }
 
     .card-front {
       position: absolute;
