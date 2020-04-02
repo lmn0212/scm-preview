@@ -89,7 +89,7 @@ function cardFlip() {
             $(this).css('-moz-transform','rotateY('+now+'deg)');
             $(this).css('transform','rotateY('+now+'deg)');
         },
-        duration:700,
+        duration:600,
         easing: 'linear',
         complete:  showCardBack
     });
