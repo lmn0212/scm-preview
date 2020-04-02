@@ -1,5 +1,5 @@
 const $screenWidth = $(window).width();
-$( document ).ready(function() {
+$(window).on('load', function() {
     $('.envelope-front').animate({ rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotateY('+now+'deg)');
