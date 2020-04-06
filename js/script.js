@@ -1,6 +1,6 @@
 const $screenWidth = $(window).width();
 $(window).on('load', function() {
-    setTimeout(start, 500)
+    setTimeout(start, 200)
 });
 function start(){
     $('.envelope-front').animate({ rotateAngle: 90 }, {
