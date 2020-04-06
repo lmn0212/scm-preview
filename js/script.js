@@ -3,7 +3,7 @@ $(window).on('load', function() {
     $('.main-container').animate({opacity: 1}, 100, 'linear', setTimeout(start, 1000));
 });
 function start(){
-    $('.envelope-front').animate({ rotateAngle: 88 }, {
+    $('.envelope-front').animate({ rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotateY('+now+'deg)');
             $(this).css('-moz-transform','rotateY('+now+'deg)');
@@ -13,9 +13,9 @@ function start(){
         easing: 'linear',
         complete:  backenvelope
     });
+    $('.envelope-front').animate({opacity: 0}, 100);
 }
 function backenvelope() {
-    $('.envelope-front').animate({opacity: 0});
     var $elem = $('.envelope-back');
     $elem.animate({opacity: 1});
     $({deg: -90}).animate({deg: 0}, {
@@ -30,12 +30,12 @@ function backenvelope() {
     });
 }
 function rotateEnv() {
-    let $rightOffset;
-    if($screenWidth < 768) {
-        $rightOffset = '35%'
-    } else {
-        $rightOffset = '35%'
-    }
+    let $rightOffset = '40%';
+    // if($screenWidth < 768) {
+    //     $rightOffset = '40%'
+    // } else {
+    //     $rightOffset = '40%'
+    // }
     $('.envelope-back').animate({ top: '0', right: $rightOffset, rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotate('+now+'deg)');
