@@ -36,7 +36,7 @@ function rotateEnv() {
     } else {
         $rightOffset = '35%'
     }
-    $('.envelope-back').animate({ top: '-2%', right: $rightOffset, rotateAngle: 90 }, {
+    $('.envelope-back').animate({ top: '0', right: $rightOffset, rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotate('+now+'deg)');
             $(this).css('-moz-transform','rotate('+now+'deg)');
