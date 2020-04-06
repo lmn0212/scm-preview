@@ -3,7 +3,7 @@ $(window).on('load', function() {
     $('.main-container').animate({opacity: 1}, 100, 'linear', setTimeout(start, 200));
 });
 function start(){
-    $('.envelope-front').animate({ rotateAngle: 80 }, {
+    $('.envelope-front').animate({ rotateAngle: 88 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotateY('+now+'deg)');
             $(this).css('-moz-transform','rotateY('+now+'deg)');
