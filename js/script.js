@@ -65,13 +65,13 @@ function cardMove() {
     let $leftOffset;
     let $topOffset;
     let $moveOffset;
-    if ($screenWidth < 768) {
+    if ($screenWidth < 769) {
         $leftOffset = '70px';
         $topOffset = '-20px';
         $moveOffset = '-185px';
     } else {
         $leftOffset = '140px';
-        $topOffset = '-40px';
+        $topOffset = '-35px';
         $moveOffset = '-350px';
     }
     card.animate({top: $moveOffset}, 600);
