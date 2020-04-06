@@ -1,22 +1,25 @@
 const $screenWidth = $(window).width();
 $(window).on('load', function() {
+    setTimeout(start, 500)
+});
+function start(){
     $('.envelope-front').animate({ rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotateY('+now+'deg)');
             $(this).css('-moz-transform','rotateY('+now+'deg)');
             $(this).css('transform','rotateY('+now+'deg)');
         },
-        duration:500,
+        duration:400,
         easing: 'linear',
         complete:  backenvelope
     });
-});
+}
 function backenvelope() {
     $('.envelope-front').animate({opacity: 0});
     var $elem = $('.envelope-back');
     $elem.animate({opacity: 1});
     $({deg: -90}).animate({deg: 0}, {
-        duration: 500,
+        duration: 400,
         step: function(now) {
             $elem.css({
                 transform: 'rotateY(' + now + 'deg)'
@@ -51,13 +54,13 @@ function openEnv() {
             $(this).css({'-moz-transform':'rotateX('+now+'deg)','transform-origin': 'top'});
             $(this).css({'transform':'rotateX('+now+'deg)','transform-origin': 'top'});
         },
-        duration: 300,
+        duration: 200,
         easing: 'linear'
     });
-    $('.cover-top').animate({opacity: 0}, 200, 'linear');
+    $('.cover-top').animate({opacity: 0}, 100, 'linear');
     setTimeout(function () {
-        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 300) );
-    }, 300)
+        $('.backwall-env').animate({opacity: 1}, 50, 'linear',setTimeout(cardMove, 200) );
+    }, 200)
 }
 
 function cardMove() {
