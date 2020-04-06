@@ -7,31 +7,32 @@
   margin: 0;
 }
 .main-container {
-  width: 100%;
-  height: 100vh;
+  margin: 5% auto 0;
+  width: 700px;
+  height: 550px;
   position: relative;
   perspective: 950px;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    height: 270px;
+    width: 320px;
+  }
 }
 
 .envelope-front {
   position: absolute;
-  right: 33%;
-  top: 25%;
+  right: 15%;
+  top: 10%;
   //-webkit-animation: env-disappear .7s 1s forwards,
   //env-rotate-back 1.2s 1s forwards;
   //animation: env-disappear 1s 1s forwards,
   //env-rotate-back 1.5s 1s forwards;
   .image {
-    height: 406px;
-    width: 630px;
-    @media screen and (max-width: 990px) {
-      height: 325px;
-      width: 505px;
-    }
-    @media screen and (max-width: 480px) {
-      height: 195px;
-      width: 305px;
+    height: 309px;
+    width: 480px;
+    @media screen and (max-width: 768px) {
+      height: 155px;
+      width: 240px;
     }
   }
 
@@ -39,20 +40,13 @@
     font-size: 45px;
     text-align: center;
     padding-top: 30%;
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 768px) {
       font-size: 25px;
+      padding-top: 25%;
     }
   }
-  @media screen and (max-width: 1600px) {
-    right: 27%;
-  }
-  @media screen and (max-width: 1200px) {
-    right: 21%;
-    top: 15%;
-  }
-  @media screen and (max-width: 480px) {
-    top: 30%;
-    right: 13%;
+  @media screen and (max-width: 768px) {
+    right: 11%;
   }
   @media screen and (max-width: 350px) {
     top: 20%;
@@ -63,13 +57,11 @@
 
 .envelope-back {
   position: absolute;
-  //height: 100%;
-  height: 717px;
-  width: 630px;
-  //width: 769px;
+  height: 545px;
+  width: 480px;
   opacity: 0;
-  top: 25%;
-  right: 33%;
+  top: 10%;
+  right: 15%;
   transform: rotateY(-90deg);
   //-webkit-transform-origin: center center;
   //transform-origin: center center;
@@ -79,22 +71,18 @@
   //animation: env-appear 1s 1.2s forwards,
   //env-rotate-front 1.5s 1s forwards,
   //put-aside 1s 2.6s forwards;
-  @media screen and (max-width: 1600px) {
-    right: 27%;
-  }
-  @media screen and (max-width: 1200px) {
-    right: 21%;
-    top: 15%;
-  }
-  @media screen and (max-width: 990px) {
-    height: 574px;
-    width: 505px;
-  }
-  @media screen and (max-width: 480px) {
-    top: 30%;
-    right: 13%;
-    height: 344px;
-    width: 305px;
+  //@media screen and (max-width: 1200px) {
+  //  right: 21%;
+  //  top: 15%;
+  //}
+  //@media screen and (max-width: 990px) {
+  //  height: 574px;
+  //  width: 505px;
+  //}
+  @media screen and (max-width: 768px) {
+    right: 11%;
+    height: 273px;
+    width: 240px;
   }
   @media screen and (max-width: 350px) {
     top: 20%;
@@ -102,80 +90,60 @@
   }
   .cover-back {
     position: absolute;
-    height: 460px;
-    width: 630px;
-    @media screen and (max-width: 990px) {
-      height: 368px;
-      width: 505px;
-    }
-    @media screen and (max-width: 480px) {
-      height: 221px;
-      width: 305px;
+    height: 350px;
+    width: 480px;
+    @media screen and (max-width: 768px) {
+      height: 175px;
+      width: 240px;
     }
   }
 
   .cover-top {
     position: absolute;
     top: 0;
-    height: 280px;
-    width: 630px;
+    height: 214px;
+    width: 480px;
     //-webkit-transform: rotate(-180deg);
     //transform: rotate(-180deg);
     //-webkit-animation: env-disappear 1s 3s forwards;
     //animation: env-disappear 1s 3s forwards;
-    @media screen and (max-width: 990px) {
-      height: 225px;
-      width: 505px;
-    }
-    @media screen and (max-width: 480px) {
-      height: 135px;
-      width: 305px;
+    @media screen and (max-width: 768px) {
+      height: 107px;
+      width: 240px;
     }
   }
 
   .backwall-env {
     position: absolute;
     opacity: 0;
-    top:-290px;
-    height: 680px;
-    width: 658px;
+    top:-215px;
+    height: 520px;
+    width: 500px;
     //-webkit-animation: env-appear 1.5s 3s forwards;
     //animation: env-appear 1.5s 3s forwards;
-    @media screen and (max-width: 990px) {
-      top:-220px;
-      height: 544px;
-      width: 526px;
-    }
-    @media screen and (max-width: 480px) {
-      top: -130px;
-      height: 326px;
-      width: 315px;
+    @media screen and (max-width: 768px) {
+      top: -105px;
+      height: 259px;
+      width: 250px;
     }
   }
 
   #card {
     position: absolute;
-    height: 570px;
-    width: 395px;
+    height: 413px;
+    width: 295px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    top: -85px;
-    left: 125px;
+    top: -55px;
+    left: 95px;
     perspective: 1140px;
-
     //-webkit-animation: card-advance 1.5s 4s forwards;
     //animation: card-advance 1.5s 4s forwards;
-    @media screen and (max-width: 990px) {
-      height: 456px;
-      width: 316px;
-      top: -67px;
-      left: 95px;
-    }
-    @media screen and (max-width: 480px) {
-      top: -37px;
-      left: 55px;
-      height: 274px;
-      width: 190px;
+    @media screen and (max-width: 768px) {
+      top: -27px;
+      left: 47px;
+      height: 207px;
+      width: 148px;
     }
     .card-front {
       position: absolute;

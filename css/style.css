@@ -165,45 +165,39 @@
   margin: 0; }
 
 .main-container {
-  width: 100%;
-  height: 100vh;
+  margin: 5% auto 0;
+  width: 700px;
+  height: 550px;
   position: relative;
   perspective: 950px;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .main-container {
+      height: 270px;
+      width: 320px; } }
 
 .envelope-front {
   position: absolute;
-  right: 33%;
-  top: 25%; }
+  right: 15%;
+  top: 10%; }
   .envelope-front .image {
-    height: 406px;
-    width: 630px; }
-    @media screen and (max-width: 990px) {
+    height: 309px;
+    width: 480px; }
+    @media screen and (max-width: 768px) {
       .envelope-front .image {
-        height: 325px;
-        width: 505px; } }
-    @media screen and (max-width: 480px) {
-      .envelope-front .image {
-        height: 195px;
-        width: 305px; } }
+        height: 155px;
+        width: 240px; } }
   .envelope-front p {
     font-size: 45px;
     text-align: center;
     padding-top: 30%; }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 768px) {
       .envelope-front p {
-        font-size: 25px; } }
-  @media screen and (max-width: 1600px) {
+        font-size: 25px;
+        padding-top: 25%; } }
+  @media screen and (max-width: 768px) {
     .envelope-front {
-      right: 27%; } }
-  @media screen and (max-width: 1200px) {
-    .envelope-front {
-      right: 21%;
-      top: 15%; } }
-  @media screen and (max-width: 480px) {
-    .envelope-front {
-      top: 30%;
-      right: 13%; } }
+      right: 11%; } }
   @media screen and (max-width: 350px) {
     .envelope-front {
       top: 20%;
@@ -211,95 +205,64 @@
 
 .envelope-back {
   position: absolute;
-  height: 717px;
-  width: 630px;
+  height: 545px;
+  width: 480px;
   opacity: 0;
-  top: 25%;
-  right: 33%;
+  top: 10%;
+  right: 15%;
   transform: rotateY(-90deg); }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 768px) {
     .envelope-back {
-      right: 27%; } }
-  @media screen and (max-width: 1200px) {
-    .envelope-back {
-      right: 21%;
-      top: 15%; } }
-  @media screen and (max-width: 990px) {
-    .envelope-back {
-      height: 574px;
-      width: 505px; } }
-  @media screen and (max-width: 480px) {
-    .envelope-back {
-      top: 30%;
-      right: 13%;
-      height: 344px;
-      width: 305px; } }
+      right: 11%;
+      height: 273px;
+      width: 240px; } }
   @media screen and (max-width: 350px) {
     .envelope-back {
       top: 20%;
       right: 2%; } }
   .envelope-back .cover-back {
     position: absolute;
-    height: 460px;
-    width: 630px; }
-    @media screen and (max-width: 990px) {
+    height: 350px;
+    width: 480px; }
+    @media screen and (max-width: 768px) {
       .envelope-back .cover-back {
-        height: 368px;
-        width: 505px; } }
-    @media screen and (max-width: 480px) {
-      .envelope-back .cover-back {
-        height: 221px;
-        width: 305px; } }
+        height: 175px;
+        width: 240px; } }
   .envelope-back .cover-top {
     position: absolute;
     top: 0;
-    height: 280px;
-    width: 630px; }
-    @media screen and (max-width: 990px) {
+    height: 214px;
+    width: 480px; }
+    @media screen and (max-width: 768px) {
       .envelope-back .cover-top {
-        height: 225px;
-        width: 505px; } }
-    @media screen and (max-width: 480px) {
-      .envelope-back .cover-top {
-        height: 135px;
-        width: 305px; } }
+        height: 107px;
+        width: 240px; } }
   .envelope-back .backwall-env {
     position: absolute;
     opacity: 0;
-    top: -290px;
-    height: 680px;
-    width: 658px; }
-    @media screen and (max-width: 990px) {
+    top: -215px;
+    height: 520px;
+    width: 500px; }
+    @media screen and (max-width: 768px) {
       .envelope-back .backwall-env {
-        top: -220px;
-        height: 544px;
-        width: 526px; } }
-    @media screen and (max-width: 480px) {
-      .envelope-back .backwall-env {
-        top: -130px;
-        height: 326px;
-        width: 315px; } }
+        top: -105px;
+        height: 259px;
+        width: 250px; } }
   .envelope-back #card {
     position: absolute;
-    height: 570px;
-    width: 395px;
+    height: 413px;
+    width: 295px;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    top: -85px;
-    left: 125px;
+    top: -55px;
+    left: 95px;
     perspective: 1140px; }
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 768px) {
       .envelope-back #card {
-        height: 456px;
-        width: 316px;
-        top: -67px;
-        left: 95px; } }
-    @media screen and (max-width: 480px) {
-      .envelope-back #card {
-        top: -37px;
-        left: 55px;
-        height: 274px;
-        width: 190px; } }
+        top: -27px;
+        left: 47px;
+        height: 207px;
+        width: 148px; } }
     .envelope-back #card .card-front {
       position: absolute;
       top: 0;

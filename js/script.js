@@ -28,14 +28,12 @@ function backenvelope() {
 }
 function rotateEnv() {
     let $rightOffset;
-    if ($screenWidth < 1600 && $screenWidth > 1000 || $screenWidth < 350) {
-        $rightOffset = '30%'
-    } else if($screenWidth < 480) {
+    if($screenWidth < 768) {
         $rightOffset = '35%'
     } else {
-        $rightOffset = '39%'
+        $rightOffset = '35%'
     }
-    $('.envelope-back').animate({ right: $rightOffset, rotateAngle: 90 }, {
+    $('.envelope-back').animate({ top: '-2%', right: $rightOffset, rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotate('+now+'deg)');
             $(this).css('-moz-transform','rotate('+now+'deg)');
@@ -67,14 +65,14 @@ function cardMove() {
     let $leftOffset;
     let $topOffset;
     let $moveOffset;
-    if ($screenWidth < 480) {
-        $leftOffset = '90px';
+    if ($screenWidth < 768) {
+        $leftOffset = '70px';
         $topOffset = '-20px';
-        $moveOffset = '-235px';
+        $moveOffset = '-185px';
     } else {
-        $leftOffset = '180px';
+        $leftOffset = '140px';
         $topOffset = '-40px';
-        $moveOffset = '-480px';
+        $moveOffset = '-350px';
     }
     card.animate({top: $moveOffset}, 600);
     setTimeout(function () {
@@ -106,7 +104,7 @@ function showCardBack() {
             });
         },
         easing: 'linear',
-        complete:  setTimeout(cardReturnFlip, 1500)
+        complete:  setTimeout(cardReturnFlip, 2000)
     });
 }
 function cardReturnFlip() {
