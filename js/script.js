@@ -24,22 +24,19 @@ function backenvelope() {
             $elem.css({
                 transform: 'rotateY(' + now + 'deg)'
             });
-            $('.envelope-back').css({
-                right: '22%'
-            });
         },
         easing: 'linear',
         complete:  setTimeout(rotateEnv, 1000)
     });
 }
 function rotateEnv() {
-    let $rightOffset = '40%';
+    let $rightOffset = '22%';
     // if($screenWidth < 768) {
-    //     $rightOffset = '40%'
+    //     $rightOffset = '22%'
     // } else {
-    //     $rightOffset = '40%'
+    //     $rightOffset = '22%'
     // }
-    $('.envelope-back').animate({ top: '0', right: $rightOffset, rotateAngle: 90 }, {
+    $('.envelope-back').animate({ top: '0', rotateAngle: 90 }, {
         step: function(now,fx) {
             $(this).css('-webkit-transform','rotate('+now+'deg)');
             $(this).css('-moz-transform','rotate('+now+'deg)');
@@ -49,6 +46,7 @@ function rotateEnv() {
         easing: 'linear',
         complete:  setTimeout(openEnv, 700)
     });
+    $('.envelope').animate({right: $rightOffset})
 }
 function openEnv() {
     $('.cover-top').animate({rotateAngle: 180 }, {
