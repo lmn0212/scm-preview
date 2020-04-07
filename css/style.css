@@ -177,13 +177,24 @@
       height: 270px;
       width: 320px; } }
 
+.envelope {
+  position: absolute;
+  right: 18%;
+  top: 20%;
+  height: 309px;
+  width: 480px; }
+
 .envelope-front {
   position: absolute;
-  right: 15%;
-  top: 10%; }
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
   .envelope-front .image {
-    height: 309px;
-    width: 480px; }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
     @media screen and (max-width: 768px) {
       .envelope-front .image {
         height: 155px;
@@ -206,11 +217,11 @@
 
 .envelope-back {
   position: absolute;
-  height: 520px;
-  width: 480px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  top: 10%;
-  right: 15%;
   transform: rotateY(-90deg); }
   @media screen and (max-width: 768px) {
     .envelope-back {

@@ -24,6 +24,9 @@ function backenvelope() {
             $elem.css({
                 transform: 'rotateY(' + now + 'deg)'
             });
+            $('.envelope-back').css({
+                right: '22%'
+            });
         },
         easing: 'linear',
         complete:  setTimeout(rotateEnv, 1000)
